@@ -4,6 +4,11 @@
     margin-bottom: 20px;
 }
 
+.contenedorUser {
+    display: flex;
+    justify-content: space-around;
+}
+
 .hidden {
     display: none;
 }
@@ -71,4 +76,10 @@
 
 .btn-see-more:hover {
     background-color: darken(var(--info-color), 10%);
+}
+
+.userForm{
+    position: absolute;
+    z-index: 2;
+    margin: auto;
 }
