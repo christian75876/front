@@ -18,7 +18,7 @@ export function NavigationBar(
             <nav>
               <button id="logouts">Logout</button>
               <br>
-              <button id="reports">Audit trail</button>
+              <button id="reports">Reports</button>
               <br>
               <button id="users">Usuarios</button>
             </nav>
