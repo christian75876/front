@@ -3,41 +3,41 @@
   margin: 15px;
 }
 
-#table {
+.table {
   display: flex;
   justify-content: center;
 }
 
-table {
+.table table {
   background-color: #1e224f;
 }
 
-th {
+.table th {
   padding: 15px;
   border-radius: 25px;
   transition: all 0.3s ease 0s;
   width: 15vw;
 }
 
-th:hover {
+.table th:hover {
   box-shadow: 0 0 15px #d0d0df;
   /* background-color: #7464ff; */
   transition: all 0.3s ease 0s;
 }
 
-a {
+.table a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 
-a:hover {
+.table a:hover {
   color: #d0d0df;
   text-shadow: 0 0 5px #d0d0df;
   transition: all 0.3s ease 0s;
 }
-td {
+.table td {
   background-color: #fff;
   text-align: center;
 }
