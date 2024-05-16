@@ -2,41 +2,38 @@ import styles from './audit.css';
 
 export function AuditScene() {
   const pageContent = `
-    // <h2 id="my-h2" >Audit Trail</h2>
-    // <div class="table">
-    //     <table>
-    //         <thead>
-    //           <tr id="head">
-		// 						<th><a>Date and time<span class"icon">🔍</span></a></th>
-    //             <th><a>User<span class"icon">🔍</span></a></th>
-		// 						<th><a>Role<span class"icon">🔍</span></a></th>
-		// 						<th><a>Clan<span class"icon">🔍</span></a></th>
-    //             <th><a>LogIn Time<span class"icon">🔍</span></a></th>
-    //             <th><a>LogOut Time<span class"icon">🔍</span></a></th>
-    //             <th><a>Event<span class"icon">🔍</span></a></th>
-    //           </tr>
-    //         </thead>
-    //         <section id="filter" style="display: none" ></section>
-    //         <tbody>
-    //           <tr>
-    //             <td>hola</td>
-    //             <td>hola</td>
-    //             <td>hola</td>
-    //             <td>hola</td>
-    //             <td>hola</td>
-    //             <td>hola</td>
-    //             <td>hola</td>
-    //           </tr>
-    //         </tbody>
-    //     </table>
-    // </div>
-    // `;
+   <h2 id="my-h2" >Audit Trail</h2>
+   <div class="${styles.table}">
+       <table>
+           <thead>
+             <tr id="head">
+	 						<th><a>Date and time<span class"icon">🔍</span></a></th>
+               <th><a>User<span class"icon">🔍</span></a></th>
+	 						<th><a>Role<span class"icon">🔍</span></a></th>
+	 						<th><a>Clan<span class"icon">🔍</span></a></th>
+               <th><a>LogIn Time<span class"icon">🔍</span></a></th>
+               <th><a>LogOut Time<span class"icon">🔍</span></a></th>
+               <th><a>Event<span class"icon">🔍</span></a></th>
+             </tr>
+           </thead>
+           <section id="filter" style="display: none" ></section>
+           <tbody>
+             <tr>
+               <td>hola</td>
+               <td>hola</td>
+               <td>hola</td>
+               <td>hola</td>
+               <td>hola</td>
+               <td>hola</td>
+               <td>hola</td>
+             </tr>
+           </tbody>
+       </table>
+   </div>
+   `;
 
     const logic = () => {
-      const h2 = document.getElementById('my-h2');
-      h2.addEventListener('click', () => {
-        alert('Hello, World!');
-      });
+      return;
     };
   
 
