@@ -1,35 +1,122 @@
-.form {
+:root {
+    --shadow: rgba(0, 0, 0, 0.3);
+    --gradient-a-start: #1e224f;
+    --gradient-a-end: #7e819a;
+    --gradient-b-start: #a0a0c6;
+    --gradient-b-end: #6d5efc;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--gradient-a-start), var(--gradient-a-end));
+    font-family: Arial, sans-serif;
+}
+
+.shade2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        135deg,
+        var(--gradient-a-start) 0%,
+        var(--gradient-a-end) 100%
+    );
+}
+
+.shade {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+        135deg,
+        var(--gradient-b-start) 0%,
+        var(--gradient-b-end) 100%
+    );
+    opacity: 0;
+    animation: fade 7s infinite;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: blink 3s infinite ease-in-out;
+}
+
+@keyframes fade {
+    0%, 5% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+form {
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin: 50px auto;
+    margin: 100px auto;
     padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
+    z-index: 1; /* Ensure form is above stars */
+    position: relative;
 }
 
-.label {
-    margin-bottom: 5px;
-    color: black;
-}
-
-.input-email,
-.input-password {
+input[type="text"],
+input[type="password"] {
     margin-bottom: 10px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
 
-.button-send {
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #bbb;
+}
+
+button {
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #4caf50;
+    background-color: #6d5efc;
     color: white;
     cursor: pointer;
 }
 
-.button-send:hover {
-    background-color: #45a049;
+button:hover {
+    background-color: #3d2d8c;
+}
+
+h4 {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 3;
 }

@@ -14,6 +14,10 @@ export async function LoginFormComponent() {
         <input type="password" id="password" name="password" autocomplete="current-password" class="${style['input-password']}">
         <button type="submit" class="${style['button-send']}">Login</button>
       </form>
+      <h4>Derechos Reservados &copy; RIWI Clan Ritchie</h4>
+          <div class="${style.shade}"></div>
+          <div class="${style.shade2}" id="starContainer"></div>
+      </div>
     `;
   
   const form = document.getElementById('loginForm');
@@ -22,10 +26,11 @@ export async function LoginFormComponent() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    if(!formValidator(email, password)){
+    if (!formValidator(email, password)) {
       alert('Please fill in all fields');
       return;
     }
+
     const token = await login(email, password);
     if (token) {
       localStorage.setItem('token', token);
@@ -34,6 +39,9 @@ export async function LoginFormComponent() {
       alert('Invalid credentials');
     }
   });
+
+  // Crear estrellas después de que el DOM esté listo
+  createStarsEffect();
 }
 
 async function login(email, password) {
@@ -56,5 +64,24 @@ async function login(email, password) {
   } catch (error) {
     console.error('Login failed:', error);
     return null;
+  }
+}
+
+// Función para crear el efecto de estrellas
+function createStarsEffect() {
+  const starContainer = document.getElementById('starContainer');
+  const numStars = 400; // Number of stars
+
+  function createStar() {
+    const star = document.createElement('div');
+    star.classList.add(style.star);
+    star.style.top = Math.random() * 100 + 'vh';
+    star.style.left = Math.random() * 100 + 'vw';
+    star.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration between 2s and 5s
+    starContainer.appendChild(star);
+  }
+
+  for (let i = 0; i < numStars; i++) {
+    createStar();
   }
 }
