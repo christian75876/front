@@ -47,5 +47,7 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
     });
   });
 
+  document.getElementById('logouts').addEventListener('click', logOut)
   document.getElementById('logout').addEventListener('click', logOut)
+
 }

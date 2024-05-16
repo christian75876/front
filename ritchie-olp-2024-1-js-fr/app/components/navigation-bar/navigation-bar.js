@@ -16,7 +16,7 @@ export function NavigationBar(
         <ul>
           <li class="list_inside">
             <nav>
-              <button id="logout">Logouts</button>
+              <button id="logouts">Logout</button>
               <br>
               <button id="reports">Audit trail</button>
               <br>
@@ -30,6 +30,7 @@ export function NavigationBar(
     <img src="${userImage}" alt="User image">
   </div>
   `;
+
   }
 
   
