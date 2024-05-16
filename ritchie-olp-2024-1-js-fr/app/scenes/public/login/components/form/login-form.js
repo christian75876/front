@@ -14,7 +14,7 @@ export async function LoginFormComponent() {
         <input type="password" id="password" name="password" autocomplete="current-password" class="${style['input-password']}">
         <button type="submit" class="${style['button-send']}">Login</button>
       </form>
-      <h4>Derechos Reservados &copy; RIWI Clan Ritchie</h4>
+      <h4 class="${style.title}">Derechos Reservados &copy; RIWI Clan Ritchie</h4>
           <div class="${style.shade}"></div>
           <div class="${style.shade2}" id="starContainer"></div>
       </div>

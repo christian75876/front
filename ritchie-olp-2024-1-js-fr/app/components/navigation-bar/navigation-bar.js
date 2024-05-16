@@ -7,13 +7,47 @@ export function NavigationBar(
 
   return `
   <div class="${styles.container}">
+    <ul class="${styles.list}">
+      <li class="${styles.list_item}" id="home"><a href="#" class="${styles.list_item}">🏠 Home</a></li>
+      <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🎮 Juegos</a></li>
+      <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏆 Ligas</a></li>
+      <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏅 Desafíos</a></li>
+      <li class="${styles.list_item} list_item--click">≡
+        <ul>
+          <li class="list_inside">
+            <nav>
+              <button id="logout">Logouts</button>
+              <br>
+              <button id="reports">Audit trail</button>
+              <br>
+              <button id="users">Usuarios</button>
+            </nav>
+          </li>
+        </ul>
+      </li>
+    <ul>
     <p>${user}</p>
     <img src="${userImage}" alt="User image">
   </div>
+  `;
+  }
 
   
-  `;
-}
+
+  // const logOuts = document.getElementById("logout");
+  //      logOuts.addEventListener("click", () => logOut());
+       //Reports
+      //  const reportsButton = shadow.getElementById("reports");
+      //  reportsButton.addEventListener("click", () =>
+      //    navigateTo("/dashboard/audit")
+      //  );
+      //  // Home
+      //  const userDasboard = shadow.getElementById("users");
+      //  userDasboard.addEventListener("click", () =>
+      //    navigateTo("/dashboard/user")
+      //  );
+      //  let Home = shadow.getElementById("home");
+      //  Home.addEventListener("click", () => navigateTo("/dashboard"));
 
 // // import "./navigation-bar.css";
 // import { logOut } from "../../helpers/log-out";

@@ -91,7 +91,7 @@ input[type="password"]::placeholder {
     color: #bbb;
 }
 
-button {
+.button-send {
     padding: 10px;
     border: none;
     border-radius: 3px;
@@ -100,11 +100,11 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.button-send:hover {
     background-color: #3d2d8c;
 }
 
-h4 {
+.title{
     position: absolute;
     bottom: 15px;
     left: 50%;
