@@ -6,14 +6,6 @@
     --gradient-b-end: #6d5efc;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: linear-gradient(135deg, var(--gradient-a-start), var(--gradient-a-end));
-    font-family: Arial, sans-serif;
-}
-
 .shade2 {
     position: absolute;
     width: 100%;
