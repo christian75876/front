@@ -9,6 +9,7 @@ export function NavigationBar(
   <div class="${styles.container}">
     <ul class="${styles.list}">
       <li class="${styles.list_item}" id="home"><a href="#" class="${styles.list_item}">🏠 Home</a></li>
+      <li class="${styles.list_item}" id="home"><a href="#" class="${styles.list_item}">🏠 Profile</a></li>
       <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🎮 Juegos</a></li>
       <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏆 Ligas</a></li>
       <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏅 Desafíos</a></li>

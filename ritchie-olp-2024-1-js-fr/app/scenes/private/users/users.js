@@ -99,7 +99,6 @@ export function UserScene(params) {
   if (params.get('id')) {
     const userId = params.get('id');
     pageContent = `
-    <button id="qwerty">New User</button>
         <h2 class=${styles['page-title']}>Información del Usuario</h2>
         <div id="user-info" class="${styles['user-info']}"></div>
         <div class="${styles.loader}" id="loader"></div>
