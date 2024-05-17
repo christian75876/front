@@ -12,7 +12,8 @@ export const routes = {
         { path: '/dashboard/users', component: UserScene },
         { path: '/dashboard/forum', component: ForumScene},
         { path: '/dashboard/show-cases', component: Showcases },
-        { path: '/dashboard/audit', component: AuditScene }
+        { path: '/dashboard/audit', component: AuditScene },
+        { path: '/dashboard/profile', component: Profile },
     ],
     public: [
         { path: '/login', component: LoginPage },

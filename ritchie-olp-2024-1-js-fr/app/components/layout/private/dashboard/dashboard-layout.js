@@ -49,9 +49,9 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
 
   document.getElementById('logout').addEventListener('click', logOut)
   document.getElementById('home').addEventListener('click', () => {
-    navigateTo('/dashboard')
+    navigateTo('/dashboard');
   });
   document.getElementById('profile').addEventListener('click', () => {
-    navigateTo('/dashboard')
-  })
+    navigateTo('/dashboard/profile');
+  });
 }
