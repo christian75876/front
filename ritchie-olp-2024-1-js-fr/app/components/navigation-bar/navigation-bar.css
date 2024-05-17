@@ -1,10 +1,12 @@
+
+
 /* Estilos para el contenedor principal */
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: var(--spacing-2);
-    background-color: rgba(94, 76, 175, 0.8);
+    background-color: #001F3F;
     color: white;
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -28,6 +30,8 @@
 
 /* Estilos para los elementos de la lista */
 .list_item {
+    display: flex; 
+    align-items: center; 
     list-style: none;
     text-align: center;
     color: inherit;
@@ -35,6 +39,11 @@
     transition: background-color 0.3s ease;
     border-radius: 10px;
     padding: 10px 20px;
+}
+
+.list_a{
+    color: inherit;
+    text-transform: uppercase; 
 }
 
 .list_item:hover {
@@ -52,8 +61,7 @@
     border: none;
     color: rgb(243, 239, 239);
     font-weight: bold;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 10px;
     border-radius: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -66,6 +74,7 @@
 
 .button:active {
     transform: scale(0.95);
+   
 }
 
 /* Estilos para la lista */
@@ -75,5 +84,17 @@
     gap: 1.5em;
     align-items: center;
 }
+.list_item:active {
+    background-color: #283593; 
+    border-radius: 10px;
+}
 
-/* Media query para pantallas pequeñas */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+

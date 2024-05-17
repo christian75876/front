@@ -1,4 +1,5 @@
 import styles from './navigation-bar.css';
+import logoRiwi from '../../assets/img/logoRiwi.png'
 
 export function NavigationBar(
   { user, userImage } =
@@ -6,18 +7,19 @@ export function NavigationBar(
 ) {
 
   return `
-  <div class="${styles.container}">
+  <div class="${styles.container}" >
+  <img src="${logoRiwi}" alt="User image"  class="${styles.icono}>
     <ul class="${styles.list}">
-        <li class="${styles.list_item}" id="home"><a href="#" class="${styles.list_item}">🏠 Home</a></li>
-        <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🎮 Juegos</a></li>
-        <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏆 Ligas</a></li>
-        <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏅 Desafíos</a></li>
+        <li  class="${styles.list_item}" id="homes"> <a class="${styles.list_a}"  href="#"  >🏠 Home</a></li>
+        <li  class="${styles.list_item}" > <a class="${styles.list_a}"  href="#"  > Retos</a></li>
+        <li  class="${styles.list_item}" > <a class="${styles.list_a}"  href="#"  > Foro</a></li>
+        
     </ul>
-    <li class="${styles.list_item}" id="profile"><p>${user}</p>
-    <img  src="${userImage}" alt="User image">
-    <button class="${styles.button}" id="logout" type="button">Logout
-    </button>   
-    </li>
+    <li class="${styles.list_item}" id="profile">
+    <p>${user}</p>
+    <img src="${userImage}" alt="User image">
+    <button class="${styles.button}" id="logout">Logout</button>   
+</li>
 
 
 </div>
