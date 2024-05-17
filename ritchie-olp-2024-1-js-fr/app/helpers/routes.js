@@ -1,6 +1,7 @@
 import { LoginPage } from '../scenes/public/login';
+import { RegisterPage } from '../scenes/public/register'
 
-import { AuditScene, HomeScene, ReportScene, SettingsScene, UserScene, ForumScene,Showcases,RegisterPage, Profile } from '../scenes/private';
+import { AuditScene, HomeScene, ReportScene, SettingsScene, UserScene, ForumScene, Showcases, Profile } from '../scenes/private';
 
 
 export const routes = {
