@@ -67,7 +67,8 @@ export function UserScene(params) {
       <button id="closeMessage">Cerrar</button>
     </form>
     `;
-    messageSection.innerHTML += `${formMenu}`;
+    console.log(aux);
+    messageSection.innerHTML = `${formMenu}`;
     // Agregar un evento para cerrar el mensaje
     const closeButton = document.getElementById('closeMessage');
     closeButton.addEventListener('click', () => {
