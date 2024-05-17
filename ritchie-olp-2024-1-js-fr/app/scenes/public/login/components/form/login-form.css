@@ -1,7 +1,7 @@
 :root {
     --shadow: rgba(0, 0, 0, 0.3);
     --gradient-a-start: #1e224f;
-    --gradient-a-end: #51546f;
+    --gradient-a-end: #5e516f;
     --gradient-b-start: #a0a0c6;
     --gradient-b-end: #6d5efc;
 }
@@ -118,5 +118,5 @@ input[type="password"]::placeholder {
     z-index: 2;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10%
+    bottom: 10%;
 }
