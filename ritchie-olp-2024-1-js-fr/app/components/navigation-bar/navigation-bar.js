@@ -13,9 +13,13 @@ export function NavigationBar(
         <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏆 Ligas</a></li>
         <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏅 Desafíos</a></li>
     </ul>
-    <p>${user}</p>
-    <img src="${userImage}" alt="User image">
-    <button class="${styles.button}" id="logout" type="button">Logout</button>
+    <li class="${styles.list_item}" id="profile"><p>${user}</p>
+    <img  src="${userImage}" alt="User image">
+    <button class="${styles.button}" id="logout" type="button">Logout
+    </button>   
+    </li>
+
+
 </div>
 
   `;
