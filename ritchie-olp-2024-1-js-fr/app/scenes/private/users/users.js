@@ -50,19 +50,19 @@ export function UserScene(params) {
     messageSection.style.display = 'block';
     const formMenu = `
     <form class="${styles.userForm}">
-      <label class="labelUser" for="firstName">Nombre:</label>
+      <label class="labelUser" for="firstName">Name:</label>
       <input class="inputUser" type="text" id="firstName" name="firstName" required>
 
-      <label class="labelUser" for="username">Usuario:</label>
+      <label class="labelUser" for="username">User:</label>
       <input class="inputUser" type="text" id="username" name="username" required>
 
-      <label class="labelUser" for="phone">Teléfono:</label>
+      <label class="labelUser" for="phone">Phone:</label>
       <input class="inputUser" type="text" id="phone" name="phone" pattern="[0-9]{10}}" required>
 
       <label class="labelUser" for="clan">Clan:</label>
       <input class="inputUser" type="text" id="clan" name="clan" required>
 
-      <label class="labelUser" for="password">Contraseña:</label>
+      <label class="labelUser" for="password">Password:</label>
       <input class="inputUser" type="password" id="password" name="password" required>
 
       <label class="labelUser" for="confirmPassword">Confirmar Contraseña:</label>
