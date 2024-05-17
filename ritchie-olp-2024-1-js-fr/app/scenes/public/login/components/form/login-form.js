@@ -1,6 +1,7 @@
 import { navigateTo } from '../../../../../Router.js';
 import { formValidator } from '../../../../../helpers';
 import style from './login-form.css';
+import logoRiwi from '../../../../../assets/img/logoRiwi.png'
 
 export async function LoginFormComponent() {
   const root = document.getElementById('root');
@@ -14,6 +15,7 @@ export async function LoginFormComponent() {
         <input type="password" id="password" name="password" autocomplete="current-password" class="${style['input-password']}">
         <button type="submit" class="${style['button-send']}">Login</button>
       </form>
+      <img class="${style.logoRiwi}" src="${logoRiwi}" alt="logo">
       <h4 class="${style.title}">Derechos Reservados &copy; RIWI Clan Ritchie</h4>
           <div class="${style.shade}"></div>
           <div class="${style.shade2}" id="starContainer"></div>

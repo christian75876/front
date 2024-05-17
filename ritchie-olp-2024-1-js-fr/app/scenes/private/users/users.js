@@ -13,6 +13,7 @@ export function UserScene(params) {
     </div>
     <div id="user-info" class="${styles['user-info']}"></div>
     <div class="${styles.loader}" id="loader"></div>
+    <div id="background"></div>
 `;
 
   let logic = async () => {
@@ -43,7 +44,9 @@ export function UserScene(params) {
   const newUser = document.getElementById('btn');
   newUser.addEventListener('click', ()=>{
     if(aux) return;
-    Background(newUser);
+    const overlay = document.getElementById('background')
+
+    Background(overlay);
     messageSection.style.display = 'block';
     const formMenu = `
     <form class="${styles.userForm}">
@@ -54,7 +57,7 @@ export function UserScene(params) {
       <input class="inputUser" type="text" id="username" name="username" required>
 
       <label class="labelUser" for="phone">Teléfono:</label>
-      <input class="inputUser" type="text" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      <input class="inputUser" type="text" id="phone" name="phone" pattern="[0-9]{10}}" required>
 
       <label class="labelUser" for="clan">Clan:</label>
       <input class="inputUser" type="text" id="clan" name="clan" required>
@@ -67,6 +70,7 @@ export function UserScene(params) {
 
       <button type="submit">Crear Usuario</button>
       <button id="closeMessage">Cerrar</button>
+      
     </form>
     `;
     console.log(aux);

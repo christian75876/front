@@ -112,3 +112,11 @@ input[type="password"]::placeholder {
     margin: 0;
     z-index: 3;
 }
+
+.logoRiwi{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%
+}
