@@ -8,27 +8,16 @@ export function NavigationBar(
   return `
   <div class="${styles.container}">
     <ul class="${styles.list}">
-      <li class="${styles.list_item}" id="home"><a href="#" class="${styles.list_item}">🏠 Home</a></li>
-      <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🎮 Juegos</a></li>
-      <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏆 Ligas</a></li>
-      <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏅 Desafíos</a></li>
-      <li class="${styles.list_item} list_item--click">≡
-        <ul>
-          <li class="list_inside">
-            <nav>
-              <button id="logouts">Logout</button>
-              <br>
-              <button id="reports">Reports</button>
-              <br>
-              <button id="users">Usuarios</button>
-            </nav>
-          </li>
-        </ul>
-      </li>
-    <ul>
+        <li class="${styles.list_item}" id="home"><a href="#" class="${styles.list_item}">🏠 Home</a></li>
+        <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🎮 Juegos</a></li>
+        <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏆 Ligas</a></li>
+        <li class="${styles.list_item}"><a href="#" class="${styles.list_item}">🏅 Desafíos</a></li>
+    </ul>
     <p>${user}</p>
     <img src="${userImage}" alt="User image">
-  </div>
+    <button class="${styles.button}" id="logout" type="button">Logout</button>
+</div>
+
   `;
 
   }

@@ -19,7 +19,6 @@ export function SidebarMenu(data = []) {
             <button id="${item.href}" type="button">${item.name}</button>
           </li>
         `).join('')}
-        <li><button id="logout" type="button">Logout</button></li>
       </ul>
     </aside>
   `;

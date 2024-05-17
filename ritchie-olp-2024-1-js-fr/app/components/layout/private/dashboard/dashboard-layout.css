@@ -21,3 +21,16 @@
     grid-area: main;
     padding: var(--spacing-3);
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas: "navbar navbar"
+                            "sidebar main";
+        grid-template-columns: 1fr;
+        grid-auto-rows: var(--navbar-height) 1fr;
+    }
+
+    .sidebar {
+        box-shadow: none; 
+    }
+}
