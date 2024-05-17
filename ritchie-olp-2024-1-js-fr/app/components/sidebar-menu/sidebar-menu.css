@@ -1,40 +1,44 @@
 /* Estilo del sidebar */
 aside.sidebar-menu {
     background-color: rgba(94, 76, 175, 0.8);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
     height: 100%;
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Estilo de la lista dentro del sidebar */
 aside.sidebar-menu > ul {
     list-style: none; /* Eliminar viñetas */
+    padding: 0;
     margin: 0;
-    padding: 20px 0; /* Espaciado interno */
 }
 
 /* Estilo de cada elemento de la lista */
 aside.sidebar-menu > ul > li {
-    margin-bottom: 10px; /* Espaciado entre elementos */
+    margin-bottom: 1em; /* Espaciado entre elementos */
 }
 
 /* Estilo del enlace/botón dentro del elemento de la lista */
 aside.sidebar-menu > ul > li > button {
     display: block;
     width: 100%;
-    padding: 12px 20px; /* Espaciado interno */
+    padding: 15px 20px; /* Espaciado interno */
     background-color: #6573c3; /* Color de fondo */
-    color: white; /* Color del texto */
-    text-align: left;
+    color: #ffffff; /* Color del texto */
+    text-align: center; /* Centrar texto */
     border: none;
-    border-radius: 4px; /* Bordes redondeados */
-    font-size: 16px;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 18px;
+    font-weight: bold; /* Texto en negrita */
+    text-transform: uppercase; /* Convertir texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
     cursor: pointer;
     transition: background-color 0.3s ease; /* Transición suave */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
 }
-
 /* Estilo al pasar el cursor sobre el enlace/botón */
 aside.sidebar-menu > ul > li > button:hover {
-    background-color: #3949ab; /* Color de fondo al pasar el cursor */
+    background-color: #030407; /* Color de fondo al pasar el cursor */
 }
 
 /* Estilo cuando el enlace/botón está activo */
