@@ -1,12 +1,13 @@
 import { navigateTo } from '../../../Router';
 import styles from './users.css';
+import { Background, BackgroundNone } from '../../../components/form-components/background';
 
 export function UserScene(params) {
 
   let pageContent = `
     <div class="${styles.contenedorUser}">
     <button id="btn">New User</button>
-    <section id="messageSection" style="display: none;"></section>
+    <section class="${styles.message}" id="messageSection" style="display: none;"></section>
       <h2 class=${styles['page-title']}>Bienvenido a usuarios</h2>
       <p>Desde Usuarios</p>
     </div>
@@ -42,6 +43,7 @@ export function UserScene(params) {
   const newUser = document.getElementById('btn');
   newUser.addEventListener('click', ()=>{
     if(aux) return;
+    Background(newUser);
     messageSection.style.display = 'block';
     const formMenu = `
     <form class="${styles.userForm}">
@@ -74,10 +76,10 @@ export function UserScene(params) {
     closeButton.addEventListener('click', () => {
       // Retornar a falso para que se pueda acceder nuevamente
       aux = false;
-
+      BackgroundNone();
+      // document.querySelector('#overlay').remove();
       messageSection.style.display = 'none';
     });
-
   })
   
 

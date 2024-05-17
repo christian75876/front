@@ -78,8 +78,17 @@
     background-color: darken(var(--info-color), 10%);
 }
 
+.message {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+}
+
 .userForm{
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 2;
     margin: auto;
+    background-color: #f2f2f2;
 }
