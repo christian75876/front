@@ -1,0 +1,18 @@
+
+.container {
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border: solid black 2px;
+    border-radius: 15px;
+}
+

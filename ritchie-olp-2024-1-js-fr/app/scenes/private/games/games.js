@@ -1,19 +1,32 @@
-// import styles from './games.css';
+import styles from './games.css';
 
 
-export function Games(){
+export function Games() {
 
-    const pageContent = `
-    <h2>Hola esto es games</h2>
+  const pageContent = `
+    <div class="${styles.container}">
+      <div class="${styles.card}">
+        <h3 class="${styles.title}">GAMES</h3>
+        <div class="${styles['container-img']}">
+          <img src="" class="${styles.img}">
+        </div>
+      </div>
+      <div class="${styles.card}">
+        <h3 class="${styles.title}">CHALLENGES</h3>
+        <div class="${styles['container-img']}">
+          <img src="" class="${styles.img}">
+        </div>
+      </div>
+    </div>
     `
-    const logic = () => {
+  const logic = () => {
 
-    }
+  }
 
 
-    return {
-        pageContent,
-        logic
-    }
+  return {
+    pageContent,
+    logic
+  }
 }
 
