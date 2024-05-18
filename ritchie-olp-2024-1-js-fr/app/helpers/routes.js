@@ -1,7 +1,7 @@
 import { LoginPage } from '../scenes/public/login';
 import { RegisterPage } from '../scenes/public/register'
 
-import { AuditScene, HomeScene, ReportScene, SettingsScene, UserScene, ForumScene, Showcases, Profile } from '../scenes/private';
+import { AuditScene, HomeScene, ReportScene, SettingsScene, UserScene, ForumScene, Showcases, Profile, Games } from '../scenes/private';
 
 
 export const routes = {
@@ -13,7 +13,9 @@ export const routes = {
         { path: '/dashboard/forum', component: ForumScene},
         { path: '/dashboard/show-cases', component: Showcases },
         { path: '/dashboard/audit', component: AuditScene },
-        { path: '/dashboard/profile', component: Profile },
+        { path: '/dashboard/profile', component: Profile},
+        { path: '/dashboard/games', component: Games},
+
     ],
     public: [
         { path: '/login', component: LoginPage },

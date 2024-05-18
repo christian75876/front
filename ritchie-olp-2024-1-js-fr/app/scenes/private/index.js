@@ -8,3 +8,4 @@ export * from './reports';
 export * from './settings';
 export * from './showcases';
 export * from './users';
+export * from './games';

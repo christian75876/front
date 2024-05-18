@@ -12,7 +12,7 @@ export function NavigationBar(
     <ul class="${styles.list}">
         <li  class="${styles.list_item}" id="homes"> <a class="${styles.list_a}"  href="#"  >🏠 Home</a></li>
         <li  class="${styles.list_item}" > <a class="${styles.list_a}"  href="#"  > Retos</a></li>
-        <li  class="${styles.list_item}" > <a class="${styles.list_a}"  href="#"  > Foro</a></li>
+        <li  class="${styles.list_item}" id="games"> <a class="${styles.list_a}"  href="#"  > Games</a></li>
         
     </ul>
     <li class="${styles.list_item}" id="profile">
