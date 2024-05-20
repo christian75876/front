@@ -47,6 +47,10 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
     });
   });
 
+  document.getElementById('aprendizaje').addEventListener('click',()=>{
+    navigateTo('/dashboard/aprendizaje')
+  })
+
   document.getElementById('logout').addEventListener('click', logOut)
   document.getElementById('homes').addEventListener('click', () => {
     navigateTo('/dashboard')
