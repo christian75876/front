@@ -1,6 +1,6 @@
 
 .container {
-    height: 70vh;
+    height: 100%;
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -20,16 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 35vh;
+    height: 50%;
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.419);
-    box-shadow: 0 0 20px rgba(138, 12, 188, 0.781),
-    0 0 40px rgba(0, 0, 0, 0.482),
-    0 0 60px rgba(106, 145, 7, 0.655),
-    0px 0px 90px rgba(138, 12, 188, 0.781) inset,
-    0 0 40px rgba(0, 0, 0, 0.482) inset,
-    0 0 60px rgba(106, 145, 7, 0.655) inset,
-    0 0 80px rgb(74, 15, 212);
+    background-color: #146ac0;
+    
 }
 
 .img {
@@ -56,8 +50,8 @@
     background-color: #fff;
     position: absolute;
     z-index: 2;
-    height: 85%;
-    width: 100%;
+    height: 50%;
+    width: 70%;
     left: 0;
     display: flex;
     align-items: center;

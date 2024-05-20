@@ -40,16 +40,13 @@ export function Games() {
         <div id="aux" class="${styles.list}">
           <div>
             <ol>
-              <li><a href="https://example.com/reto1" target="_blank">Reto 1</a></li>
-              <li><a href="https://example.com/reto2" target="_blank">Reto 2</a></li>
-              <li><a href="https://example.com/reto3" target="_blank">Reto 3</a></li>
-              <li><a href="https://example.com/reto4" target="_blank">Reto 4</a></li>
-              <li><a href="https://example.com/reto5" target="_blank">Reto 5</a></li>
-              <li><a href="https://example.com/reto6" target="_blank">Reto 6</a></li>
-              <li><a href="https://example.com/reto7" target="_blank">Reto 7</a></li>
-              <li><a href="https://example.com/reto8" target="_blank">Reto 8</a></li>
-              <li><a href="https://example.com/reto9" target="_blank">Reto 9</a></li>
-              <li><a href="https://example.com/reto10" target="_blank">Reto 10</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/04-workshop-1" target="_blank">Workshop 1</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/05-workshop-2" target="_blank">Workshop 2</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/07-workshop-3" target="_blank">Workshop 3</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/11-workshop-4" target="_blank">Workshop 4</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/15-workshop-5" target="_blank">Workshop 5</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/15-workshop-6" target="_blank">Workshop 6</a></li>
+              <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/16-workshop-7" target="_blank">Workshop 7</a></li>
             </ol>
             <button id="closeMessage">Cerrar</button>
           </div>
