@@ -49,3 +49,13 @@ aside.sidebar-menu > ul > li > button.active {
     background-color: #283593; /* Color de fondo activo */
     border-radius: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+    aside.sidebar-menu {
+        padding: 10px; /* Reducir el espaciado interno */
+    }
+
+    aside.sidebar-menu > ul > li > button {
+        font-size: 14px; /* Reducir el tamaño de fuente */
+    }
+}

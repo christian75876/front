@@ -98,5 +98,25 @@
 .container .icono{
     object-fit: cover;
 }
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container .userImage {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container p {
+        font-size: 14px;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+}
+
 
 
