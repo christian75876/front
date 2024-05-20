@@ -11,14 +11,31 @@
 
 .h1 {
     text-align: center;
-    color: #000;
-    margin-bottom: 20px;
+    color: #5d1cde;
 }
 
+.botonInfo{
+    width: 30%;
+    background: rgb(36, 222, 51);
+    border-radius: 10px;
+    color: white;
+    font-weight: 900;
+}
+.botonInit{
+    padding: 1em;
+    background: rgb(36, 222, 51);
+    border-radius: 10px;
+    color: white;
+    font-weight: 900;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.botonInit:hover{
+    background: rgb(4, 92, 32);
+}
 .course {
     display: flex;
     align-items: center;
-    background-color: #4a90e2;
+    background-color: #053d75;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -48,13 +65,15 @@
 }
 
 .contenedor {
-    background: lightblue;
+    background: #146ac0;
+    color: white;
+    font-weight: 900;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: calc(33.333% - 20px); /* 3 items per row */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.575);
+    width: calc(33.333% - 20px);
     height: 150px;
     padding: 20px;
     margin: 10px;

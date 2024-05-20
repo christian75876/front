@@ -3,7 +3,7 @@ import styles from "./aprendizaje.css";
 export function Aprendizaje() {
   const estudios = [
     { nombre: "Html", cursos: [
-      "Estructura Básica de HTML",
+      "Estructura Básica de HTML", 
       "Etiquetas Semánticas",
       "Formularios HTML",
       "Multimedia",
@@ -57,7 +57,7 @@ export function Aprendizaje() {
     let coursesContent = "";
     temas.forEach(title => {
       coursesContent += `
-        <div class="${styles.course}">
+        <div class="${styles.course }">
           <div class="course-info">
             <h2>${title}</h2>
             <progress value="0" max="100"></progress>
@@ -72,15 +72,15 @@ export function Aprendizaje() {
     let estudiosContent = "";
     estudio.forEach((element, index) => {
       if (index === 3) {
-        estudiosContent += `<h3 class="${styles.conetenedores}" >Backend</h3>`;
+        estudiosContent += `<h3 class="${styles.h1}" >Backend:</h3>`;
       } else if (index === 0) {
-        estudiosContent += `<h3 class="${styles.conetenedores}" >Frontend</h3>`;
+        estudiosContent += `<h3 class="${styles.h1}" >Frontend:</h3>`;
       }
       const cursosJSON = JSON.stringify(element.cursos);
       estudiosContent += `
         <div class='${styles.contenedor} contenedorInfo'>
           <p>${element.nombre}</p>
-          <button class="btnEstudio" data-curso='${cursosJSON}'>Info</button>
+          <button class="${styles.botonInfo} btnEstudio" data-curso='${cursosJSON}'>Info</button>
         </div>
       `;
     });
@@ -90,8 +90,8 @@ export function Aprendizaje() {
   const crearContenido = () => {
     let pageContent = document.createElement("div");
     pageContent.innerHTML = `
-      <button id="btnCursos">Ruta de aprendizaje</button>
-      <button id="back" style="display: none;"><=</button>
+      <button id="btnCursos" class="${styles.botonInit}" >Ruta de aprendizaje</button>
+      <button id="back" style="display: none;">⬅️</button>
       <div id="container-courses"></div>
       <div class='contenedorInfo ${styles.conetenedores}' style="display: none;">
         ${crearEstudio(estudios)}
@@ -100,10 +100,7 @@ export function Aprendizaje() {
     return pageContent;
   };
 
-  const cursosNodeJs = generalTemas(estudios.find(estudio => estudio.nombre === "Nodejs")?.cursos || []);
-  const cursoBasesDeDatos = generalTemas(estudios.find(estudio => estudio.nombre === "Bases de Datos")?.cursos || []);
-  const cursoSeguridad = generalTemas(estudios.find(estudio => estudio.nombre === "Seguridad")?.cursos || []);
-
+ 
   const container = crearContenido();
 
   const logic = () => {
