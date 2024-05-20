@@ -21,8 +21,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: green;
     height: 50%;
     border-radius: 50%;
-    box-shadow: 0 0 60px 5px green;
+    background-color: rgba(0, 0, 0, 0.419);
+    box-shadow: 0 0 20px rgba(138, 12, 188, 0.781),
+    0 0 40px rgba(0, 0, 0, 0.482),
+    0 0 60px rgba(106, 145, 7, 0.655),
+    0px 0px 90px rgba(138, 12, 188, 0.781) inset,
+    0 0 40px rgba(0, 0, 0, 0.482) inset,
+    0 0 60px rgba(106, 145, 7, 0.655) inset,
+    0 0 80px rgb(74, 15, 212);
+}
+
+.img {
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.img:hover {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.9);
 }
