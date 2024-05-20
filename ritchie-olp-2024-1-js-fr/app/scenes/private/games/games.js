@@ -18,48 +18,56 @@ export function Games() {
           <img id="challenges" src="${challenge}" class="${styles.img}">
         </div>
       </div>
+      <div id="background" class="${styles.background}"></div>
     </div>
-    <div id="background"></div>
+    
     `
   const logic = () => {
 
     const challenges = document.getElementById('challenges');
     let aux = false;
-    const overlay = document.getElementById('background');
+    
     challenges.addEventListener('click', () => {
-      if (aux) return;
-      Background(overlay);
+      
 
+
+      if (aux) return;
+      const overlay = document.getElementById('background');
+      overlay.style.display = 'block';
+      Background(overlay);
+      console.log(overlay);
       const challenge = `
-        <div>
-          <ol>
-            <li><a href="https://example.com/reto1" target="_blank">Reto 1</a></li>
-            <li><a href="https://example.com/reto2" target="_blank">Reto 2</a></li>
-            <li><a href="https://example.com/reto3" target="_blank">Reto 3</a></li>
-            <li><a href="https://example.com/reto4" target="_blank">Reto 4</a></li>
-            <li><a href="https://example.com/reto5" target="_blank">Reto 5</a></li>
-            <li><a href="https://example.com/reto6" target="_blank">Reto 6</a></li>
-            <li><a href="https://example.com/reto7" target="_blank">Reto 7</a></li>
-            <li><a href="https://example.com/reto8" target="_blank">Reto 8</a></li>
-            <li><a href="https://example.com/reto9" target="_blank">Reto 9</a></li>
-            <li><a href="https://example.com/reto10" target="_blank">Reto 10</a></li>
-          </ol>
-          <button id="closeMessage">Cerrar</button>
+        <div id="aux" class="${styles.list}">
+          <div>
+            <ol>
+              <li><a href="https://example.com/reto1" target="_blank">Reto 1</a></li>
+              <li><a href="https://example.com/reto2" target="_blank">Reto 2</a></li>
+              <li><a href="https://example.com/reto3" target="_blank">Reto 3</a></li>
+              <li><a href="https://example.com/reto4" target="_blank">Reto 4</a></li>
+              <li><a href="https://example.com/reto5" target="_blank">Reto 5</a></li>
+              <li><a href="https://example.com/reto6" target="_blank">Reto 6</a></li>
+              <li><a href="https://example.com/reto7" target="_blank">Reto 7</a></li>
+              <li><a href="https://example.com/reto8" target="_blank">Reto 8</a></li>
+              <li><a href="https://example.com/reto9" target="_blank">Reto 9</a></li>
+              <li><a href="https://example.com/reto10" target="_blank">Reto 10</a></li>
+            </ol>
+            <button id="closeMessage">Cerrar</button>
+          </div>
         </div>
       `;
-      overlay.innerHTML = `${challenge}`;
+      overlay.innerHTML += `${challenge}`;
 
       // Agregar un evento para cerrar el mensaje
     const closeButton = document.getElementById('closeMessage');
     closeButton.addEventListener('click', () => {
       // Retornar a falso para que se pueda acceder nuevamente
-      aux = false;
       BackgroundNone();
-      // document.querySelector('#overlay').remove();
+      aux = false;
+      //ocualtar formulario para evitar removerlo
       overlay.style.display = 'none';
     });
 
-    })
+     })
 
   }
 
