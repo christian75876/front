@@ -2,9 +2,21 @@ import { navigateTo } from '../../../../../Router.js';
 import { formValidator } from '../../../../../helpers';
 import style from './login-form.css';
 import logoRiwi from '../../../../../assets/img/logoRiwi.png'
+import day from '../../../../../assets/img/day.jpg'
+import night from '../../../../../assets/img/night.jpg'
+
 
 export async function LoginFormComponent() {
-  const root = document.getElementById('root');
+   const root = document.getElementById('root');
+
+  const fechaActual = new Date();
+  let hora = fechaActual.getHours();
+  console.log(hora);
+  let img = day;
+
+  if(hora > 12) img = night;
+
+  console.log(img);
 
   root.innerHTML = `
       <form id="loginForm" class="${style.form}">
@@ -19,8 +31,11 @@ export async function LoginFormComponent() {
       <h4 class="${style.title}">Derechos Reservados &copy; RIWI Clan Ritchie</h4>
           <div class="${style.shade}"></div>
           <div class="${style.shade2}" id="starContainer"></div>
+          <img src="${img}">
       </div>
     `;
+
+  
   
   const form = document.getElementById('loginForm');
   form.addEventListener('submit', async (event) => {
@@ -86,4 +101,8 @@ function createStarsEffect() {
   for (let i = 0; i < numStars; i++) {
     createStar();
   }
+
+
+
+  
 }
