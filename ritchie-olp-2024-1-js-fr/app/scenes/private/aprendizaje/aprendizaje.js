@@ -24,6 +24,32 @@ export function Aprendizaje() {
       "Funciones",
       "Objetos y Arrays",
       "Programación Orientada a Objetos"
+    ] },
+    { nombre: "Nodejs", cursos: [
+      "Introducción a Node.js",
+      "Manejo de módulos y paquetes",
+      "Sistema de archivos",
+      "Eventos y streams",
+      "Express.js y creación de servidores",
+      "Middlewares",
+      "Acceso a bases de datos con Node.js"
+    ] },
+    { nombre: "Bases de Datos", cursos: [
+      "Modelado de datos",
+      "Bases de datos relacionales (SQL)",
+      "Bases de datos no relacionales (NoSQL)",
+      "MongoDB",
+      "MySQL",
+      "Queries avanzadas",
+      "ORMs (Object-Relational Mapping)"
+    ] },
+    { nombre: "Seguridad", cursos: [
+      "Principios de seguridad informática",
+      "Autenticación y autorización",
+      "Protección contra ataques comunes (SQL Injection, XSS, CSRF, etc.)",
+      "Gestión de sesiones y cookies",
+      "HTTPS y TLS",
+      "OWASP Top 10"
     ] }
   ];
 
@@ -44,7 +70,12 @@ export function Aprendizaje() {
 
   const crearEstudio = (estudio) => {
     let estudiosContent = "";
-    estudio.forEach((element) => {
+    estudio.forEach((element, index) => {
+      if (index === 3) {
+        estudiosContent += `<h3 class="${styles.conetenedores}" >Backend</h3>`;
+      } else if (index === 0) {
+        estudiosContent += `<h3 class="${styles.conetenedores}" >Frontend</h3>`;
+      }
       const cursosJSON = JSON.stringify(element.cursos);
       estudiosContent += `
         <div class='${styles.contenedor} contenedorInfo'>
@@ -59,28 +90,26 @@ export function Aprendizaje() {
   const crearContenido = () => {
     let pageContent = document.createElement("div");
     pageContent.innerHTML = `
-      <button id="btnFrontEnd">Frontend</button>
-      <button id="btnBackend">Backend</button>
+      <button id="btnCursos">Ruta de aprendizaje</button>
       <button id="back" style="display: none;"><=</button>
       <div id="container-courses"></div>
-      <div class='contenedorInfo ${styles.prueba}'>
+      <div class='contenedorInfo ${styles.conetenedores}' style="display: none;">
         ${crearEstudio(estudios)}
       </div>
     `;
     return pageContent;
   };
 
-  const cursosHTML = generalTemas(estudios.find(estudio => estudio.nombre === "Html")?.cursos || []);
-  const cursosCSS = generalTemas(estudios.find(estudio => estudio.nombre === "Css")?.cursos || []);
-  const cursosJavaScript = generalTemas(estudios.find(estudio => estudio.nombre === "JavaScript")?.cursos || []);
+  const cursosNodeJs = generalTemas(estudios.find(estudio => estudio.nombre === "Nodejs")?.cursos || []);
+  const cursoBasesDeDatos = generalTemas(estudios.find(estudio => estudio.nombre === "Bases de Datos")?.cursos || []);
+  const cursoSeguridad = generalTemas(estudios.find(estudio => estudio.nombre === "Seguridad")?.cursos || []);
 
   const container = crearContenido();
 
   const logic = () => {
     const contenedorInfo = document.querySelectorAll(".contenedorInfo");
     const coursesContainer = document.getElementById("container-courses");
-    const btnFrontEnd = document.getElementById("btnFrontEnd");
-    const btnBackend = document.getElementById("btnBackend")
+    const btnCursos = document.getElementById("btnCursos");
     const back = document.getElementById("back");
 
     const esconder = () => {
@@ -88,7 +117,7 @@ export function Aprendizaje() {
         element.style.display = "none";
       });
     };
-    esconder()
+    esconder();
 
     const mostrar = () => {
       contenedorInfo.forEach(element => {
@@ -101,15 +130,14 @@ export function Aprendizaje() {
       coursesContainer.style.display = "block";
     };
 
-    btnFrontEnd.addEventListener("click", () => {
-      btnFrontEnd.style.display = "none";
-      btnBackend.style.display = "none";
+    btnCursos.addEventListener("click", () => {
+      btnCursos.style.display = "none";
       mostrar();
       back.style.display = "block";
     });
-
+  
     back.addEventListener("click", () => {
-      btnFrontEnd.style.display = "block";
+      btnCursos.style.display = "flex";
       back.style.display = "none";
       esconder();
       coursesContainer.style.display = "none";
@@ -138,4 +166,5 @@ export function Aprendizaje() {
     logic,
   };
 }
+
 

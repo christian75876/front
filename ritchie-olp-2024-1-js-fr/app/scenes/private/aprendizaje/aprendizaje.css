@@ -1,6 +1,5 @@
-/*Courses*/
-
-.display{
+/* Courses */
+.display {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
@@ -10,7 +9,7 @@
     color: white;
 }
 
-.h1{
+.h1 {
     text-align: center;
     color: #000;
     margin-bottom: 20px;
@@ -19,28 +18,35 @@
 .course {
     display: flex;
     align-items: center;
-    background-color: #525c91;
+    background-color: #4a90e2;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
     transition: background-color 0.3s;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .course:hover {
-    background-color: #2b324f;
+    background-color: #357ab7;
 }
 
-.prueba{
+.contenedores {
     display: flex;
-    flex-direction: column;
-    gap:1em;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items horizontally */
 }
 
+.categoria {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
 
-
-
-
-/*general*/
 .contenedor {
     background: lightblue;
     border-radius: 10px;
@@ -48,12 +54,14 @@
     justify-content: space-between;
     flex-direction: column;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 10em;
-    height: 10em;
+    width: calc(33.333% - 20px); /* 3 items per row */
+    height: 150px;
     padding: 20px;
+    margin: 10px;
 }
 
-.div{
+.div {
     display: flex;
     justify-content: space-around;
 }
+
