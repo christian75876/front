@@ -91,7 +91,7 @@ export function Aprendizaje() {
     let pageContent = document.createElement("div");
     pageContent.innerHTML = `
       <button id="btnCursos" class="${styles.botonInit}" >Ruta de aprendizaje</button>
-      <button id="back" style="display: none;">⬅️</button>
+      <button id="back" style="display: none;cursor: pointer;">⬅️</button>
       <div id="container-courses"></div>
       <div class='contenedorInfo ${styles.conetenedores}' style="display: none;">
         ${crearEstudio(estudios)}
