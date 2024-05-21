@@ -19,6 +19,7 @@ export async function LoginFormComponent() {
   console.log(img);
 
   root.innerHTML = `
+    <div class="${style.contenedor}">
       <form id="loginForm" class="${style.form}">
       <h2>Login</h2>
         <label for="email" class="${style.label}">Email:</label>
@@ -27,11 +28,15 @@ export async function LoginFormComponent() {
         <input type="password" id="password" name="password" autocomplete="current-password" class="${style['input-password']}">
         <button type="submit" class="${style['button-send']}">Login</button>
       </form>
+      <div class="${style["contenedor-img"]}">
+        <img src="${img}" all="day or night" class="${style.img}">
+      </div>
+    </div>
+      
       <img class="${style.logoRiwi}" src="${logoRiwi}" alt="logo">
       <h4 class="${style.title}">Derechos Reservados &copy; RIWI Clan Ritchie</h4>
           <div class="${style.shade}"></div>
           <div class="${style.shade2}" id="starContainer"></div>
-          <img src="${img}">
       </div>
     `;
 
