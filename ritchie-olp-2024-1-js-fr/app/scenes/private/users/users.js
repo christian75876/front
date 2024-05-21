@@ -17,8 +17,10 @@ export function UserScene(params) {
 `;
 
   let logic = async () => {
-    const resp = await fetch('https://jsonplaceholder.typicode.com/users');
+    const resp = await fetch('http://localhost:4000/api/users/all/');
     const users = await resp.json();
+    console.log(' Perro');
+    console.table(users);
     const userInfo = document.getElementById('user-info');
     userInfo.innerHTML = `
         <table class="${styles['user-table']}">
@@ -32,7 +34,7 @@ export function UserScene(params) {
             <tbody>
                 ${users.map(user => `
                 <tr>
-                    <td>${user.name}</td>
+                    <td>${user.email}</td>
                     <td>${user.username}</td>
                     <td><button id="${user.id}" class="${styles['btn-see-more']}">Ver más</button></td>
                 </tr>`).join('')}
