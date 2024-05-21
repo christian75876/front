@@ -11,13 +11,13 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
   const root = document.getElementById('root');
 
   sidebarData = [
-    { href: '/dashboard', name: 'Home' },
     { href: '/dashboard/reports', name: 'Reports' },
     { href: '/dashboard/settings', name: 'Settings' },
     { href: '/dashboard/users', name: 'Users' },
     { href: '/dashboard/products', name: 'Products' },
     { href: '/dashboard/forum', name: 'Forum' },
     { href: '/dashboard/show-cases', name: 'Showcases' },
+    { href: '/dashboard/audit', name: 'Audit'},
   ];
 
   navbarData = {
@@ -47,5 +47,18 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
     });
   });
 
+  document.getElementById('aprendizaje').addEventListener('click',()=>{
+    navigateTo('/dashboard/aprendizaje')
+  })
+
   document.getElementById('logout').addEventListener('click', logOut)
+  document.getElementById('homes').addEventListener('click', () => {
+    navigateTo('/dashboard')
+  });
+  document.getElementById('profile').addEventListener('click', () => {
+    navigateTo('/dashboard/profile');
+  });
+  document.getElementById('games').addEventListener('click', ()=> {
+    navigateTo('/dashboard/games')
+  })
 }

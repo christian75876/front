@@ -1,0 +1,89 @@
+/* Courses */
+.display {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: beige;
+    color: white;
+}
+
+.h1 {
+    text-align: center;
+    color: #5d1cde;
+}
+
+.botonInfo{
+    width: 30%;
+    background: rgb(36, 222, 51);
+    border-radius: 10px;
+    color: white;
+    font-weight: 900;
+    cursor: pointer;
+}
+.botonInit{
+    padding: 1em;
+    background: rgb(36, 222, 51);
+    border-radius: 10px;
+    color: white;
+    font-weight: 900;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.botonInit:hover{
+    background: rgb(4, 92, 32);
+}
+.course {
+    display: flex;
+    align-items: center;
+    background-color: #053d75;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.course:hover {
+    background-color: #357ab7;
+}
+
+.contenedores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the items horizontally */
+}
+
+.categoria {
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.contenedor {
+    background: #146ac0;
+    color: white;
+    font-weight: 900;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.575);
+    width: calc(33.333% - 20px);
+    height: 150px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.div {
+    display: flex;
+    justify-content: space-around;
+}
+

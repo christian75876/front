@@ -4,6 +4,11 @@
     margin-bottom: 20px;
 }
 
+.contenedorUser {
+    display: flex;
+    justify-content: space-around;
+}
+
 .hidden {
     display: none;
 }
@@ -63,7 +68,7 @@
 
 .btn-see-more {
     background-color: var(--info-color);
-    color: white;
+    color: rgb(119, 66, 185);
     border: none;
     padding: 8px 16px;
     cursor: pointer;
@@ -72,3 +77,34 @@
 .btn-see-more:hover {
     background-color: darken(var(--info-color), 10%);
 }
+
+.message {
+    position: absolute;
+    margin: auto;
+    text-align: center;
+}
+
+.userForm{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    margin: auto;
+    background-color: #146ac0;
+    height: 515px;
+    border-radius: 5px;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #6d5efc;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .btn:hover {
+    background-color: #3d2d8c;
+  }
