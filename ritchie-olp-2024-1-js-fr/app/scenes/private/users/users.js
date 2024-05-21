@@ -6,7 +6,7 @@ export function UserScene(params) {
 
   let pageContent = `
     <div class="${styles.contenedorUser}">
-    <button id="btn">New User</button>
+    <button class="${styles.btn}" id="btn">New User</button>
     <section class="${styles.message}" id="messageSection" style="display: none;"></section>
       <h2 class=${styles['page-title']}>Bienvenido a usuarios</h2>
       <p>Desde Usuarios</p>
@@ -68,8 +68,8 @@ export function UserScene(params) {
       <label class="labelUser" for="confirmPassword">Confirmar Contraseña:</label>
       <input class="inputUser" type="password" id="confirmPassword" name="confirmPassword" required>
 
-      <button type="submit">Crear Usuario</button>
-      <button id="closeMessage">Cerrar</button>
+      <button class="${styles.btn} ${styles.btnFor}" type="submit">Crear Usuario</button>
+      <button class="${styles.btn} ${styles.btnFor}" id="closeMessage">Cerrar</button>
       
     </form>
     `;

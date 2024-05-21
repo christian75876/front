@@ -48,7 +48,7 @@ export function Games() {
               <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/15-workshop-6" target="_blank">Workshop 6</a></li>
               <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/16-workshop-7" target="_blank">Workshop 7</a></li>
             </ol>
-            <button id="closeMessage">Cerrar</button>
+            <button class="${styles.btn}" id="closeMessage">Cerrar</button>
           </div>
         </div>
       `;

@@ -102,3 +102,16 @@
     transform: translateY(-2px);
   }
   
+  .btn {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #6d5efc;
+    color: white;
+    cursor: pointer;
+    
+  }
+
+  .btn:hover {
+    background-color: #3d2d8c;
+  }
