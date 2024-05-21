@@ -64,12 +64,11 @@
 
 .contenedor {
     width: 600px;
-    margin:  auto;
+    margin:  120px auto;
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: row;
-    background-color: aqua;
     justify-content: center;
     align-items: center;
 }
@@ -77,9 +76,10 @@
 form {
     display: flex;
     flex-direction: column;
-    width: 300px;
     padding: 20px;
-    border-radius: 5px;
+    width: 300px;
+    height: 250px;
+    border-radius: 5px 0 0 5px;
     background-color: rgba(0, 0, 0, 0.35);
     color: #fff;
     text-shadow: 2px 2px 2px #000;
@@ -133,14 +133,12 @@ input[type="password"]::placeholder {
 }
 
 .contenedor-img {
-    background-color: aqua;
-    width: 300px;
-    height: 300px;
+    height: 250px;
     position: relative;
-    margin: 100px auto;
+    
 }
 
 .img {
     height: 100%;
-    
+    border-radius: 0 5px 5px 0;
 }
