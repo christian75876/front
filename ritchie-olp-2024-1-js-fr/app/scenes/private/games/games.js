@@ -39,7 +39,7 @@ export function Games() {
       const challenge = `
         <div id="aux" class="${styles.list}">
           <div>
-            <ol>
+            <ol class="${styles.lista}">
               <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/04-workshop-1" target="_blank">Workshop 1</a></li>
               <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/05-workshop-2" target="_blank">Workshop 2</a></li>
               <li><a href="https://github.com/nicopicon98/Riwi-js-2024-1/tree/master/07-workshop-3" target="_blank">Workshop 3</a></li>
