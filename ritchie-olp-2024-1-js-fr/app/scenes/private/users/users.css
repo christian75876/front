@@ -90,5 +90,7 @@
     transform: translateX(-50%);
     z-index: 3;
     margin: auto;
-    background-color: #71609e;
+    background-color: #146ac0;
+    height: 480px;
+    border-radius: 5px;
 }

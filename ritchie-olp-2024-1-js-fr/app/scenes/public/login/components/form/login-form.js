@@ -14,6 +14,7 @@ export async function LoginFormComponent() {
   console.log(hora);
   let img = day;
 
+  //dependiendo de la hora va a mostrar una imagen o la otra!!
   if(hora > 12) img = night;
 
   console.log(img);
