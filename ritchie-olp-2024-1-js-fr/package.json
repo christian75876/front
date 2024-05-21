@@ -15,6 +15,7 @@
         "@babel/preset-env": "^7.0.0",
         "babel-loader": "^8.0.0",
         "css-loader": "^6.0.0",
+        "fetch-mock": "^9.11.0",
         "file-loader": "^6.2.0",
         "html-loader": "^4.0.0",
         "html-webpack-plugin": "^5.0.0",
