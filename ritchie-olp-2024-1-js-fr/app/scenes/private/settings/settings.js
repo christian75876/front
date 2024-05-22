@@ -2,6 +2,10 @@ import { DashboardLayout } from '../../../components/layout/private/dashboard/da
 import styles from './settings.css';
 
 export function SettingsScene() {
+  const email = localStorage.getItem('email')
+  
+  const password = localStorage.getItem('password') 
+
 
   const pageContent = `
       <h2 class='${styles['title-h2']}'>Seccion Usuarios</h2>
@@ -10,7 +14,7 @@ export function SettingsScene() {
             <h2>Actualización de Contraseña</h2>
             <div class='${styles['form-group']}'>
                 <label for="username"> Email</label>
-                <input type="text" id="username" name="username"  disabled>
+                <input type="text" id="username" name="username" value=${email} disabled>
             </div>
             <div class='${styles['form-group']}'>
                 <label for="current-password">Contraseña Actual</label>
@@ -36,7 +40,11 @@ export function SettingsScene() {
     let decodedPayload = JSON.parse(atob(payload));
     let id = decodedPayload.id;
 
-    const resp = await fetch(`http://localhost:4000/api/users/${id}/`);
+    const resp = await fetch(`http://localhost:4000/api/users/${id}/`, {
+      method: 'GET',
+      headers: {
+        "Authorization" : `Bearer ${localStorage.getItem('token')}`
+    }});
     const user = await resp.json();
     const email = document.getElementById('username');
     email.value = `${user.email}`

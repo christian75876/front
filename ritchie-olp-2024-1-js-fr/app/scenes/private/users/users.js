@@ -17,7 +17,11 @@ export function UserScene(params) {
   `;
 
   let logic = async () => {
-    const resp = await fetch('http://localhost:4000/api/users/all/');
+    const resp = await fetch('http://localhost:4000/api/users/all/', {
+      method: 'GET',
+      headers: {
+        "Authorization" : `Bearer ${localStorage.getItem('token')}`
+  }});
     const users = await resp.json();
     const userInfo = document.getElementById('user-info');
     userInfo.innerHTML = `
@@ -130,9 +134,10 @@ export function UserScene(params) {
         try {
           const response = await fetch(`http://localhost:4000/api/users/${e.target.id}`,
             {
-              method: 'DELETE'
-
-            });
+              method: 'DELETE',
+              headers: {
+                "Authorization" : `Bearer ${localStorage.getItem('token')}`
+            }});
             if(!response.ok){
               throw new Error('Error al eliminar el usuario');
             }
@@ -163,7 +168,12 @@ export function UserScene(params) {
     `;
 
     logic = async () => {
-      const resp = await fetch(`http://localhost:4000/api/users/${userId}/`);
+      const resp = await fetch(`http://localhost:4000/api/users/${userId}/`, {
+        method: 'GET',
+        headers: {
+          "Authorization" : `Bearer ${localStorage.getItem('token')}`
+        }
+      });
       const user = await resp.json();
       const userInfo = document.getElementById('user-info');
       userInfo.innerHTML = `
