@@ -103,7 +103,6 @@ export function UserScene(params) {
         <div id="user-info" class="${styles['user-info']}"></div>
         <div class="${styles.loader}" id="loader"></div>
         `;
-        console.log(userId);
 
     logic = async () => {
       console.log("first")
@@ -114,7 +113,7 @@ export function UserScene(params) {
             <table class="${styles['user-details-table']}">
                 <tr><th>ID</th><td>${user.id}</td></tr>
                 <tr><th>Name</th><td>${user.username}</td></tr>
-                <tr><th>Name</th><td>${user.email}</td></tr>
+                <tr><th>Email</th><td>${user.email}</td></tr>
             </table>
             `;
       document.querySelector(`#loader`).classList.add(styles.hidden);

@@ -68,14 +68,14 @@
 
 .btn-see-more {
     background-color: var(--info-color);
-    color: rgb(119, 66, 185);
+    color: #fff;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
 }
 
 .btn-see-more:hover {
-    background-color: darken(var(--info-color), 10%);
+    background-color:var(--primary-color)
 }
 
 .message {
