@@ -26,7 +26,11 @@ export function AuditScene() {
 
   const fetchAuditData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/auditoria');
+      const response = await fetch('http://localhost:4000/api/audit', {
+      method: 'GET',
+      headers: {
+        "Authorization" : `Bearer ${localStorage.getItem('token')}`
+  }});
       if (!response.ok) {
         throw new Error(`Error en la solicitud: ${response.status}`);
       }
@@ -43,13 +47,9 @@ export function AuditScene() {
     data.forEach((item) => {
       const row = document.createElement('tr');
       row.innerHTML = `
-        <td>${item.dateTime}</td>
-        <td>${item.user}</td>
-        <td>${item.role}</td>
-        <td>${item.clan}</td>
-        <td>${item.logInTime}</td>
-        <td>${item.logOutTime}</td>
-        <td>${item.event}</td>
+        <td>${item.email}</td>
+        <td>${item.fecha}</td>
+        <td>${item.tipo}</td>
       `;
       tbody.appendChild(row);
     });
