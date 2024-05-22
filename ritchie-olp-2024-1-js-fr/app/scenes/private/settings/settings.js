@@ -33,8 +33,18 @@ export function SettingsScene() {
   </div>
     `;
 
-  const logic = () => {
-    console.log("hello from settings logic");
+  const logic = async () => {
+    const token = localStorage.token;
+    
+    let payload = token.split('.')[1];
+    let decodedPayload = JSON.parse(atob(payload));
+    let id = decodedPayload.id;
+
+    const resp = await fetch(`http://localhost:4000/api/users/${id}/`);
+    const user = await resp.json();
+    const email = document.getElementById('username');
+    email.value = `${user.email}`
+
   }
 
   return {

@@ -12,7 +12,7 @@ export function Profile() {
 
   const logic = async () => {
     const token = localStorage.token;
-    console.log('token');
+    
 
     let payload = token.split('.')[1];
     let decodedPayload = JSON.parse(atob(payload));
