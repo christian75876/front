@@ -40,7 +40,11 @@ export function SettingsScene() {
     let decodedPayload = JSON.parse(atob(payload));
     let id = decodedPayload.id;
 
-    const resp = await fetch(`http://localhost:4000/api/users/${id}/`);
+    const resp = await fetch(`http://localhost:4000/api/users/${id}/`, {
+      method: 'GET',
+      headers: {
+        "Authorization" : `Bearer ${localStorage.getItem('token')}`
+    }});
     const user = await resp.json();
     const email = document.getElementById('username');
     email.value = `${user.email}`
