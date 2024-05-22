@@ -43,30 +43,6 @@ export function UserScene(params) {
       </table>
     `;
 
-    document.querySelectorAll(`.${styles['btn-delete']}`).forEach(btn =>{
-      btn.addEventListener('click', async (e) =>{
-        let aux =confirm('¿Estás seguro de que quieres eliminar este usuario?')
-        if(!aux){
-          return
-        }
-        try {
-          const response = await fetch(`http://localhost:4000/api/users/${e.target.id}`,
-            {
-              method: 'DELETE'
-
-            });
-            if(!response.ok){
-              throw new Error('Error al eliminar el usuario');
-            }
-            alert('Usuario eliminado exitosamente');
-            logic(); //Actualizar la lista de usuarios...
-        } catch (error) {
-          console.error('Error', error);
-          alert('Error al eliminar el usuario');
-        }
-      }) 
-    })
-
     let aux = false;
     const newUser = document.getElementById('btn');
     newUser.addEventListener('click', () => {
@@ -143,6 +119,30 @@ export function UserScene(params) {
           alert('Error al crear el usuario');
         }
       });
+    });
+
+    document.querySelectorAll(`.${styles['btn-delete']}`).forEach(btn =>{
+      btn.addEventListener('click', async (e) =>{
+        let aux =confirm('¿Estás seguro de que quieres eliminar este usuario?')
+        if(!aux){
+          return
+        }
+        try {
+          const response = await fetch(`http://localhost:4000/api/users/${e.target.id}`,
+            {
+              method: 'DELETE'
+
+            });
+            if(!response.ok){
+              throw new Error('Error al eliminar el usuario');
+            }
+            alert('Usuario eliminado exitosamente');
+            logic(); //Actualizar la lista de usuarios...
+        } catch (error) {
+          console.error('Error', error);
+          alert('Error al eliminar el usuario');
+        };
+      }); 
     });
 
     document.querySelectorAll(`.${styles['btn-see-more']}`).forEach(btn => {
