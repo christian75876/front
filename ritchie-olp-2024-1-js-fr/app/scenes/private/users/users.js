@@ -19,8 +19,6 @@ export function UserScene(params) {
   let logic = async () => {
     const resp = await fetch('http://localhost:4000/api/users/all/');
     const users = await resp.json();
-    console.log(' Perro');
-    console.table(users);
     const userInfo = document.getElementById('user-info');
     userInfo.innerHTML = `
         <table class="${styles['user-table']}">
@@ -105,25 +103,18 @@ export function UserScene(params) {
         <div id="user-info" class="${styles['user-info']}"></div>
         <div class="${styles.loader}" id="loader"></div>
         `;
+        console.log(userId);
 
     logic = async () => {
       console.log("first")
-      const resp = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+      const resp = await fetch(`http://localhost:4000/api/users/${userId}/`);
       const user = await resp.json();
       const userInfo = document.getElementById('user-info');
       userInfo.innerHTML = `
             <table class="${styles['user-details-table']}">
                 <tr><th>ID</th><td>${user.id}</td></tr>
-                <tr><th>Name</th><td>${user.name}</td></tr>
-                <tr><th>Username</th><td>${user.username}</td></tr>
-                <tr><th>Email</th><td>${user.email}</td></tr>
-                <tr><th>Address</th><td>${user.address.street}, ${user.address.suite}, ${user.address.city}, ${user.address.zipcode}</td></tr>
-                <tr><th>Geo</th><td>${user.address.geo.lat}, ${user.address.geo.lng}</td></tr>
-                <tr><th>Phone</th><td>${user.phone}</td></tr>
-                <tr><th>Website</th><td>${user.website}</td></tr>
-                <tr><th>Company</th><td>${user.company.name}</td></tr>
-                <tr><th>Catch Phrase</th><td>${user.company.catchPhrase}</td></tr>
-                <tr><th>BS</th><td>${user.company.bs}</td></tr>
+                <tr><th>Name</th><td>${user.username}</td></tr>
+                <tr><th>Name</th><td>${user.email}</td></tr>
             </table>
             `;
       document.querySelector(`#loader`).classList.add(styles.hidden);
