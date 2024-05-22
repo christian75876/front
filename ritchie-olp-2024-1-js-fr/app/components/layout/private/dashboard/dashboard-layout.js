@@ -11,12 +11,9 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
   const root = document.getElementById('root');
 
   sidebarData = [
-    { href: '/dashboard/reports', name: 'Reports' },
     { href: '/dashboard/settings', name: 'Settings' },
     { href: '/dashboard/users', name: 'Users' },
-    { href: '/dashboard/products', name: 'Products' },
-    { href: '/dashboard/forum', name: 'Forum' },
-    { href: '/dashboard/show-cases', name: 'Showcases' },
+    { href: '/dashboard/challenges', name: 'Challenge' },
     { href: '/dashboard/audit', name: 'Audit'},
   ];
 
@@ -62,3 +59,16 @@ export function DashboardLayout(pageContent, logic, footer, navbarData, sidebarD
     navigateTo('/dashboard/games')
   })
 }
+
+// export function MyLayout(pageContent){
+//   const root = document.getElementById('root')
+//   const menu = `<nav>
+//   <ul>
+    
+//   </ul>
+// </nav>`
+//   root.innerHTML = `
+//     ${menu}
+//     ${pageContent}
+//   `
+// }

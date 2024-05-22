@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'popins-regular';
+    src: url(../assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
 :root {
 
     /* Colors */
     --primary-color: #007bff;
     --secondary-color: #6c757d;
     --success-color: #28a745;
+    --success-color-hover: #218837;
     --info-color: #17a2b8;
     --warning-color: #ffc107;
     --danger-color: #dc3545;
@@ -20,6 +26,9 @@
     --spacing-3: 1rem;
     --spacing-4: 1.5rem;
     --spacing-5: 3rem;
+
+    /* Font Family */
+    --font-family-base: 'popins-regular', sans-serif;
 
     /* Breakpoints */
     --breakpoint-xs: 0;
@@ -52,7 +61,7 @@
     --navbar-height: auto;
 
     /*sidebar width*/
-    --sidebar-width: 200px;
+    --sidebar-width: 100px;
 
 }
 
