@@ -74,6 +74,10 @@
     cursor: pointer;
 }
 
+.btn-delete:hover{
+    background-color: red;
+}
+
 .btn-see-more:hover {
     background-color:var(--primary-color)
 }
