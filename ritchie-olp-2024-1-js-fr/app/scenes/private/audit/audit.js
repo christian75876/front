@@ -8,7 +8,8 @@ export function AuditScene() {
         <thead>
           <tr id="head">
           <th><a>User<span class="icon">🔍</span></a></th>
-          <th><a>Date and time<span class="icon">🔍</span></a></th>
+          <th><a>Date<span class="icon">🔍</span></a></th>
+          <th><a>Hour<span class="icon">🔍</span></a></th>
           <th><a>Activity<span class="icon">🔍</span></a></th>
           </tr>
         </thead>
@@ -41,12 +42,21 @@ export function AuditScene() {
     const tbody = document.getElementById('audit-tbody');
     tbody.innerHTML = '';
     data.forEach((item) => {
+      const utcDate = new Date(item.fecha);
+      const colombiaTimeOffset = -5 * 60; // Colombia está en UTC-5
+      const colombiaDate = new Date(utcDate.getTime() + colombiaTimeOffset * 60 * 1000);
+
+      const datePart = colombiaDate.toISOString().split('T')[0];
+      const timePart = colombiaDate.toISOString().split('T')[1].slice(0, 8);
       const row = document.createElement('tr');
       row.innerHTML = `
         <td>${item.email}</td>
-        <td>${item.fecha}</td>
+        <td>${datePart}</td>
+        <td>${timePart}</td>
         <td>${item.tipo}</td>
       `;
+     
+      console.log(data)
       tbody.appendChild(row);
     });
   };
@@ -62,13 +72,15 @@ export function AuditScene() {
       menu.addEventListener('click', () => {
         if (aux2) return;
         element.style.display = 'block';
+        element.innerHTML='';
         const form = `
-          <form id="filterForm" class="filter-form">
+          <form id="filterForm" class="${styles["filter-form"]}">
             <label class="filter-label" for="filterType">Filter By:</label>
             <select class="filter-input" id="filterType" name="filterType">
-              <option value="userId">User ID</option>
-              <option value="clan">Clan</option>
-              <option value="role">Role</option>
+              <option value="userId">User</option>
+              <option value="clan">Date</option>
+              <option value="role">Hour</option>
+              <option value="role">Activity</option>
             </select>
 
             <label class="filter-label" for="filterValue">Filter Value:</label>
@@ -80,8 +92,8 @@ export function AuditScene() {
               <option value="desc">Descending</option>
             </select>
 
-            <button type="submit" class="filter-button">Filter</button>
-            <button id="closeFormButton" class="filter-button">Close</button>
+            <button type="submit" class="${styles.btn}">Filter</button>
+            <button id="closeFormButton" class="${styles.btn}">Close</button>
           </form>
         `;
         element.innerHTML += form;

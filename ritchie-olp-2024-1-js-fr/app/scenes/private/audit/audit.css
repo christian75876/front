@@ -10,6 +10,7 @@
 
 .table table {
   background-color: var(--info-color);
+  border-radius: 5px;
 }
 
 .table th {
@@ -42,5 +43,29 @@
   text-align: center;
 }
 
+.filter-form{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: var(--dark-color);
+  color: #fff;
+  text-shadow: 2px 2px 2px #000;
+}
+
+.btn {
+   background-color: var(--success-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: var(--success-color-hover);
+}
 
 
