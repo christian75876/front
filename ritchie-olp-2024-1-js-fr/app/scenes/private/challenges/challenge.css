@@ -59,6 +59,7 @@
     justify-content: flex-end;
 }
 
+
 .challenge_title-container,
 .challenge_description-container {
     display: flex;
@@ -70,11 +71,13 @@
 
 }
 
+
 .challenge_title-input {
     width: 100%;
     padding: var(--spacing-2);
-    border: 1px solid var(--color-primary);
     border-radius: var(--border-radius);
+    background-color: #fff !important;
+    color: black !important;
 }
 
 .editor {
@@ -107,4 +110,21 @@
     gap: var(--spacing-3);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     padding: var(--spacing-3);
+}
+
+.toolbarContainer {
+    background-color: var(--white-color);
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #45a049;
 }

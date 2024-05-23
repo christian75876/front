@@ -25,8 +25,8 @@ export function CreateChallengeScene() {
         <div class="${styles["description-container"]}">
             <label>Descripción del reto</label>
             <div class="${styles["action-buttons"]}">
-                <button id="saveButton" type="button">Guardar</button>
-                <button type="submit">Publicar</button>
+                <button class="${styles.btn}" id="saveButton" type="button">Guardar</button>
+                <button class="${styles.btn}" type="submit">Publicar</button>
             </div>
         </div>
         ${ToolbarContainer()}

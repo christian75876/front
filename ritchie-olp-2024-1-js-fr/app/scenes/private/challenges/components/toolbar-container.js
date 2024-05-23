@@ -1,6 +1,8 @@
+import styles from '../challenge.css'
+
 export function ToolbarContainer() {
     return `
-    <div id="toolbar-container">
+    <div id="toolbar-container" class="${styles.toolbarContainer}">
     <span class="ql-formats">
         <select class="ql-font"></select>
         <select class="ql-size"></select>

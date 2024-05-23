@@ -104,7 +104,8 @@ export function UserScene(params) {
           const response = await fetch('http://localhost:4000/api/users/', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+               "Authorization" : `Bearer ${localStorage.getItem('token')}`
             },
             body: JSON.stringify(userData)
           });
