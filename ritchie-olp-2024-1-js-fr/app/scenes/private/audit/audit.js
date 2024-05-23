@@ -7,13 +7,9 @@ export function AuditScene() {
       <table>
         <thead>
           <tr id="head">
-            <th><a>Date and time<span class="icon">🔍</span></a></th>
-            <th><a>User<span class="icon">🔍</span></a></th>
-            <th><a>Role<span class="icon">🔍</span></a></th>
-            <th><a>Clan<span class="icon">🔍</span></a></th>
-            <th><a>LogIn Time<span class="icon">🔍</span></a></th>
-            <th><a>LogOut Time<span class="icon">🔍</span></a></th>
-            <th><a>Event<span class="icon">🔍</span></a></th>
+          <th><a>User<span class="icon">🔍</span></a></th>
+          <th><a>Date and time<span class="icon">🔍</span></a></th>
+          <th><a>Activity<span class="icon">🔍</span></a></th>
           </tr>
         </thead>
         <section id="filter" style="display: none"></section>

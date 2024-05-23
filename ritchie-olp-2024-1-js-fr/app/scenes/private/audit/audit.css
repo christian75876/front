@@ -9,7 +9,7 @@
 }
 
 .table table {
-  background-color: #1e224f;
+  background-color: var(--info-color);
 }
 
 .table th {

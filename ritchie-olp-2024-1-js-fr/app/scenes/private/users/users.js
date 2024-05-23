@@ -60,16 +60,16 @@ export function UserScene(params) {
       const formMenu = `
         <form id="newUserForm" class="${styles.userForm}">
           <label class="labelUser" for="username">User:</label>
-          <input class="inputUser" type="text" id="username" name="username" required>
+          <input class="${styles.inputUser}" type="text" id="username" name="username" required>
 
           <label class="labelUser" for="email">Email:</label>
-          <input class="inputUser" type="text" id="email" name="email" required>
+          <input class="${styles.inputUser}" type="text" id="email" name="email" required>
 
           <label class="labelUser" for="password">Password:</label>
-          <input class="inputUser" type="password" id="password" name="password" required>
+          <input class="${styles.inputUser}" type="password" id="password" name="password" required>
 
           <label class="labelUser" for="confirmPassword">Confirmar Contraseña:</label>
-          <input class="inputUser" type="password" id="confirmPassword" name="confirmPassword" required>
+          <input class="${styles.inputUser}" type="password" id="confirmPassword" name="confirmPassword" required>
 
           <button class="${styles.btn} ${styles.btnFor}" type="submit">Crear Usuario</button>
           <button class="${styles.btn} ${styles.btnFor}" id="closeMessage" type="button">Cerrar</button>
@@ -121,7 +121,7 @@ export function UserScene(params) {
           logic();
         } catch (error) {
           console.error('Error:', error);
-          alert('Error al crear el usuario');
+          alert('El usuario ya está registrado en la plataforma.');
         }
       });
     });

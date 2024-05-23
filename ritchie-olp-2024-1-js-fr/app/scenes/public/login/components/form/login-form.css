@@ -87,8 +87,8 @@
     position: relative;
 }
 
-input[type="text"],
-input[type="password"]{
+.input-email,
+.input-password{
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;

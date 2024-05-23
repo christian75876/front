@@ -85,6 +85,14 @@
 
 }
 
+.inputUser{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
 .btn-delete:hover{
     background-color: red;
 }
@@ -105,9 +113,9 @@
     transform: translateX(-50%);
     z-index: 3;
     margin: auto;
+    color: black !important;
     border: 2px solid var(--primary-color);
-    background-color: var(--gray-color);
-    height: 515px;
+    background-color: var(--white-color);
     padding: 24px;
     border-radius: 5px;
 }
