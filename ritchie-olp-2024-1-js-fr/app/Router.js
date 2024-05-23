@@ -68,11 +68,11 @@ async function checkAuth(path, params) {
 
 // Definir y manejar el router
 export async function Router() {
-  const path = window.location.pathname;
+  const path = window.location.pathname; // /login
   const params = new URLSearchParams(window.location.search);
 
   // Verificar autenticación antes de decidir qué componente mostrar
-  if (path === '/login' || path === '/') {
+  if (path === '/login') {
     const token = localStorage.getItem('token');
     if (token) {
       const [isValid] = await verifyToken(token);

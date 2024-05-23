@@ -2,14 +2,49 @@ import { DashboardLayout } from '../../../components/layout/private/dashboard/da
 import styles from './settings.css';
 
 export function SettingsScene() {
-
+  
   const pageContent = `
-      <h2>Settings</h2>
-      <p>Welcome to the settings view.</p>
+      <h2 class='${styles.title2}'>Sección de usuarios</h2>
+      <div class='${styles.formContainer }'>
+        <form action="#" method="post">
+            <h2 class='${styles.h2}'>Actualización de Contraseña</h2>
+            <div class='${styles.formGroup}'>
+                <label for="username"> Email</label>
+                <input type="text" id="username" name="username" disabled>
+            </div>
+            <div class='${styles.formGroup}'>
+                <label for="current-password">Contraseña Actual</label>
+                <input type="password" id="current-password" name="current-password" required>
+            </div>
+            <div class='${styles.formGroup}'>
+                <label for="new-password">Nueva Contraseña</label>
+                <input type="password" id="new-password" name="new-password" required>
+            </div>
+            <div class='${styles.formGroup}'>
+                <label for="confirm-password">Verificación de Nueva Contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button class='${styles.button}' type="submit">Actualizar</button>
+        </form>
+  </div>
     `;
 
-  const logic = () => {
-    console.log("hello from settings logic");
+  const logic = async () => {
+    const token = localStorage.token;
+    
+    let payload = token.split('.')[1];
+    let decodedPayload = JSON.parse(atob(payload));
+    let id = decodedPayload.id;
+
+    const resp = await fetch(`http://localhost:4000/api/users/${id}/`, {
+      method: 'GET',
+      headers: {
+        "Authorization" : `Bearer ${localStorage.getItem('token')}`
+    }});
+    const user = await resp.json();
+    const email = document.getElementById('username');
+    email.value = `${user.email}`
+
   }
 
   return {

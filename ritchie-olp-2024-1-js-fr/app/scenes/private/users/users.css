@@ -68,14 +68,37 @@
 
 .btn-see-more {
     background-color: var(--info-color);
-    color: rgb(119, 66, 185);
+    color: #fff;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn-delete {
+    background-color: var(--success-color);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+.inputUser{
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.btn-delete:hover{
+    background-color: red;
 }
 
 .btn-see-more:hover {
-    background-color: darken(var(--info-color), 10%);
+    background-color:var(--primary-color)
 }
 
 .message {
@@ -90,8 +113,10 @@
     transform: translateX(-50%);
     z-index: 3;
     margin: auto;
-    background-color: #146ac0;
-    height: 515px;
+    color: black !important;
+    border: 2px solid var(--primary-color);
+    background-color: var(--white-color);
+    padding: 24px;
     border-radius: 5px;
 }
 
@@ -99,12 +124,12 @@
     padding: 10px;
     border: none;
     border-radius: 3px;
-    background-color: #6d5efc;
+    background-color: var(--success-color);
     color: white;
     cursor: pointer;
     margin: 5px;
   }
 
   .btn:hover {
-    background-color: #3d2d8c;
+    background-color: var(--success-color-hover);
   }

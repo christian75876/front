@@ -1,17 +1,22 @@
 
+
+
 .container{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-details-table {
-    width: 75%;
+    width: 500px;
+    height: 20vh;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
 .user-details-table th, .user-details-table td {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding-left: 24px;
 }
 
 .user-details-table th {
@@ -36,6 +41,7 @@
 
 .user-details-table td {
     background-color: #fff;
+    width: 50%;
 }
 
 .container-img {
