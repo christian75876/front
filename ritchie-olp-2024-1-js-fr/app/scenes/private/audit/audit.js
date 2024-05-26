@@ -64,7 +64,6 @@ export function AuditScene() {
         <td>${newEmail}</td>
       `;
      
-      console.log(data)
       tbody.appendChild(row);
     });
   };
