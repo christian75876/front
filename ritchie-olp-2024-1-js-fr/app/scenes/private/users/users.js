@@ -92,7 +92,7 @@ export function UserScene(params) {
         const userData = {
           username: formData.get('username'),
           email: formData.get('email'),
-          hashedPassword: formData.get('password')
+          password: formData.get('password')
         };
 
         // if (userData.password !== formData.get('confirmPassword')) {
