@@ -121,7 +121,7 @@ export function UserScene(params) {
           logic();
         } catch (error) {
           console.error('Error:', error);
-          alert('El usuario ya está registrado en la plataforma.');
+          alert('El usuario ya está registrado en la plataforma.'+ error);
         }
       });
     });

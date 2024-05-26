@@ -11,6 +11,8 @@ export function AuditScene() {
           <th><a>Date<span class="icon">🔍</span></a></th>
           <th><a>Hour<span class="icon">🔍</span></a></th>
           <th><a>Activity<span class="icon">🔍</span></a></th>
+          <th><a>New user<span class="icon">🔍</span></a></th>
+          <th><a>New email<span class="icon">🔍</span></a></th>
           </tr>
         </thead>
         <section id="filter" style="display: none"></section>
@@ -49,11 +51,17 @@ export function AuditScene() {
       const datePart = colombiaDate.toISOString().split('T')[0];
       const timePart = colombiaDate.toISOString().split('T')[1].slice(0, 8);
       const row = document.createElement('tr');
+
+      const newUser = item.newUser !== undefined ? item.newUser : ' ';
+      const newEmail = item.newEmail !== undefined ? item.newEmail : ' ';
+
       row.innerHTML = `
         <td>${item.email}</td>
         <td>${datePart}</td>
         <td>${timePart}</td>
         <td>${item.tipo}</td>
+        <td>${newUser}</td>
+        <td>${newEmail}</td>
       `;
      
       console.log(data)
