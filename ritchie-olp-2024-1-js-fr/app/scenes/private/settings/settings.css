@@ -9,6 +9,10 @@
     margin-top: var(--spacing-4);
 }
 
+.email {
+    color: #fff;
+}
+
 .title-p {
     color: var(--primary-color);
     font-size: 1.625rem;
@@ -20,6 +24,7 @@
 .formContainer {
     padding: var(--spacing-5);
     border-radius: var(--border-radius);
+    background-color: var(--info-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 400px;
     margin: 0 auto;

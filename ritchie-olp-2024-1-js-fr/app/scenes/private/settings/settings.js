@@ -10,7 +10,7 @@ export function SettingsScene() {
             <h2 class='${styles.h2}'>Actualización de Contraseña</h2>
             <div class='${styles.formGroup}'>
                 <label for="username"> Email</label>
-                <input type="text" id="username" name="username" disabled>
+                <input class="${styles.email}" type="text" id="username" name="username" disabled>
             </div>
             <div class='${styles.formGroup}'>
                 <label for="current-password">Contraseña Actual</label>
