@@ -43,7 +43,29 @@ export function SettingsScene() {
     }});
     const user = await resp.json();
     const email = document.getElementById('username');
-    email.value = `${user.email}`
+    email.value = `${user.email}`;
+
+    const updatedAt = user.updated_at.split('T')[0];
+
+    alert(`La ultima modicificacion de contraseña fue: ${updatedAt}`);
+
+    function monthDiff(d1, d2) {
+      let months = (d2.getFullYear() - d1.getFullYear()) * 12;
+      months -= d1.getMonth();
+      months += d2.getMonth();
+      return months <= 0 ? 0 : months;
+    }
+
+    const updatedDate = new Date(updatedAt);
+    const currentDate = new Date();
+
+    const diffInMonths = monthDiff(updatedDate, currentDate);
+
+    if (diffInMonths > 3) {
+      alert('La última actualización fue hace más de 3 meses.');
+    }
+    
+    console.log(`Diferencia en meses: ${diffInMonths}`);
 
   }
 
