@@ -14,7 +14,7 @@
     color: #5d1cde;
 }
 
-.botonInfo {
+.infoButton {
     width: 30%;
     background: rgb(36, 222, 51);
     border-radius: 10px;
@@ -23,7 +23,7 @@
     cursor: pointer;
 }
 
-.botonInit {
+.initButton {
     padding: 1em;
     background: rgb(36, 222, 51);
     border-radius: 10px;
@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 
-.botonInit:hover {
+.initButton:hover {
     background: rgb(4, 92, 32);
 }
 
@@ -55,13 +55,13 @@
     background-color: #357ab7;
 }
 
-.contenedores {
+.containers {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.categoria {
+.category {
     width: 100%;
     text-align: center;
     color: black;
@@ -70,7 +70,7 @@
     margin: 20px 0;
 }
 
-.contenedor {
+.container {
     background: #146ac0;
     color: white;
     font-weight: 900;
@@ -90,20 +90,19 @@
     justify-content: space-around;
 }
 
-/* Estilos para pantallas pequeñas (hasta 768px) */
+/* Styles for small screens (up to 768px) */
 @media screen and (max-width: 768px) {
     .display {
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: 100%; /* Full width */
     }
 
-    .botonInfo {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        margin-top: 10px; /* Espacio entre botones */
+    .infoButton {
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Space between buttons */
     }
 
-    .contenedor {
-        width: calc(100% - 20px); /* Ocupa todo el ancho disponible */
-        margin: 10px 0; /* Espacio entre filas */
+    .container {
+        width: calc(100% - 20px); /* Full width */
+        margin: 10px 0; /* Space between rows */
     }
 }
-

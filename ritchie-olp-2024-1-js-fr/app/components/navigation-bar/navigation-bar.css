@@ -1,4 +1,4 @@
-/* Estilos para el contenedor principal */
+/* Styles for the main container */
 .container {
     display: flex;
     justify-content: space-around;
@@ -12,7 +12,7 @@
     gap: var(--spacing-2);
 }
 
-/* Estilos para las imágenes dentro del contenedor */
+/* Styles for images inside the container */
 .container .userImage {
     width: 40px;
     height: 40px;
@@ -25,13 +25,13 @@
     object-fit: contain;
 }
 
-/* Estilos para el texto dentro del contenedor */
+/* Styles for the text inside the container */
 .container p {
     font-size: 16px;
     color: white;
 }
 
-/* Estilos para los elementos de la lista */
+/* Styles for list items */
 .list_item {
     display: flex;
     align-items: center;
@@ -58,7 +58,7 @@
     cursor: pointer;
 }
 
-/* Estilos para los botones */
+/* Styles for buttons */
 .button {
     background-color: transparent;
     border: none;
@@ -79,7 +79,7 @@
     transform: scale(0.95);
 }
 
-/* Estilos para la lista */
+/* Styles for the list */
 .list {
     display: flex;
     flex-direction: row;
@@ -110,12 +110,12 @@
     margin-right: 5px;
 }
 
-/* Estilos para pantallas pequeñas (hasta 768px) */
+/* Styles for small screens (up to 768px) */
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        height: auto; /* Altura automática para ajustar al contenido */
-        padding: var(--spacing-1); /* Reducción del padding */
+        height: auto; /* Auto height to fit the content */
+        padding: var(--spacing-1); /* Reduced padding */
     }
 
     .container .userImage {
@@ -125,6 +125,28 @@
 
     .container p {
         font-size: 14px;
+    }
+
+    .list {
+        flex-direction: column;
+    }
+}
+
+/* Styles for medium screens (769px to 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto; /* Auto height to fit the content */
+        padding: var(--spacing-2); /* Medium padding */
+    }
+
+    .container .userImage {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container p {
+        font-size: 15px;
     }
 
     .list {
