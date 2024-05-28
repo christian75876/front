@@ -110,6 +110,7 @@
     justify-content: center;
     text-transform: uppercase;
     margin-left: 5px;
+    margin-right: 5px;
 }
 
 @media only screen and (max-width: 768px) {
