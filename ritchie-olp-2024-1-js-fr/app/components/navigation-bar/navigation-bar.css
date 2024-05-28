@@ -1,7 +1,7 @@
 /* Styles for the main container */
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between; /* Align items to the left and right */
     align-items: center;
     padding: var(--spacing-2);
     background-color: #001F3F;
@@ -114,6 +114,7 @@
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
         height: auto; /* Auto height to fit the content */
         padding: var(--spacing-1); /* Reduced padding */
     }
@@ -129,6 +130,11 @@
 
     .list {
         flex-direction: column;
+        width: 100%; /* Full width for list items */
+    }
+
+    .list_item {
+        justify-content: flex-start; /* Align list items to the left */
     }
 }
 
@@ -136,6 +142,7 @@
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
         flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
         height: auto; /* Auto height to fit the content */
         padding: var(--spacing-2); /* Medium padding */
     }
@@ -151,5 +158,10 @@
 
     .list {
         flex-direction: column;
+        width: 100%; /* Full width for list items */
+    }
+
+    .list_item {
+        justify-content: flex-start; /* Align list items to the left */
     }
 }

@@ -10,7 +10,7 @@ export function HomeScene() {
   <footer><p>All rights reserved.</p></footer>
   `;
 
-  const pageContent = `
+  const pageContent = ` 
   <div class="${styles.hidden}" id="home_container">
     <h2>Home</h2>
     <p>Welcome to the home view.</p>
@@ -51,6 +51,7 @@ export function HomeScene() {
         }
       }) => {
         const userInfo = document.getElementById('user-info');
+
         userInfo.innerHTML = `
         <p>User: ${id}</p>
         <p>Name: ${name}</p>
