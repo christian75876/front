@@ -6,11 +6,14 @@
 .table {
   display: flex;
   justify-content: center;
+  overflow: scroll;
+  height: 50vh;
 }
 
 .table table {
   background-color: var(--info-color);
   border-radius: 5px;
+  position: relative;
 }
 
 .table th {
@@ -25,6 +28,12 @@
   /* background-color: #7464ff; */
   transition: all 0.3s ease 0s;
 }
+
+.table thead {
+  position: relative;
+}
+
+.table thead tr {}
 
 .table a {
   color: #fff;
