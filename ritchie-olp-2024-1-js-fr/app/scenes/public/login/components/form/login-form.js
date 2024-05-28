@@ -49,6 +49,7 @@ export async function LoginFormComponent() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+
     if (!formValidator(email, password)) {
       alert('Please fill in all fields');
       return;
@@ -57,6 +58,7 @@ export async function LoginFormComponent() {
     const token = await login(email, password);
     if (token) {
       localStorage.setItem('token', token);
+      localStorage.setItem('name', email);
       navigateTo('/dashboard');
     } else {
       alert('Invalid credentials');
