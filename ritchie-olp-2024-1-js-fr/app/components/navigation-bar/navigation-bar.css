@@ -1,5 +1,3 @@
-
-
 /* Estilos para el contenedor principal */
 .container {
     display: flex;
@@ -22,10 +20,9 @@
     border-radius: 50%;
 }
 
-.icono{
+.icono {
     height: 4em;
     object-fit: contain;
-
 }
 
 /* Estilos para el texto dentro del contenedor */
@@ -36,8 +33,8 @@
 
 /* Estilos para los elementos de la lista */
 .list_item {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     list-style: none;
     text-align: center;
     color: inherit;
@@ -47,9 +44,9 @@
     padding: 10px 20px;
 }
 
-.list_a{
+.list_a {
     color: inherit;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .list_item:hover {
@@ -80,7 +77,6 @@
 
 .button:active {
     transform: scale(0.95);
-   
 }
 
 /* Estilos para la lista */
@@ -90,12 +86,13 @@
     gap: 1.5em;
     align-items: center;
 }
+
 .list_item:active {
-    background-color: #283593; 
+    background-color: #283593;
     border-radius: 10px;
 }
 
-.container .icono{
+.container .icono {
     object-fit: cover;
 }
 
@@ -113,10 +110,12 @@
     margin-right: 5px;
 }
 
+/* Estilos para pantallas pequeñas (hasta 768px) */
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
-        height: auto;
+        height: auto; /* Altura automática para ajustar al contenido */
+        padding: var(--spacing-1); /* Reducción del padding */
     }
 
     .container .userImage {
@@ -132,6 +131,3 @@
         flex-direction: column;
     }
 }
-
-
-

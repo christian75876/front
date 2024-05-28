@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-areas: "sidebar navbar"
-                        "sidebar main";
+                         "sidebar main";
     grid-template-columns: minmax(var(--sidebar-width), auto) 1fr;
     grid-auto-rows: var(--navbar-height) 1fr;
     height: 100vh;
@@ -22,15 +22,16 @@
     padding: var(--spacing-3);
 }
 
+/* Estilos para pantallas pequeñas (hasta 768px) */
 @media screen and (max-width: 768px) {
     .container {
         grid-template-areas: "navbar navbar"
-                            "sidebar main";
-        grid-template-columns: 1fr;
+                             "sidebar main";
+        grid-template-columns: minmax(100px, auto) 1fr; /* Ajustar el ancho mínimo del sidebar */
         grid-auto-rows: var(--navbar-height) 1fr;
     }
 
     .sidebar {
-        box-shadow: none; 
+        box-shadow: none; /* Remover la sombra en pantallas pequeñas */
     }
 }
