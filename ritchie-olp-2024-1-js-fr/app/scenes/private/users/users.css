@@ -76,7 +76,7 @@
 }
 
 .btn-delete {
-    background-color: var(--success-color);
+    background-color: red;
     color: #fff;
     border: none;
     padding: 8px 16px;
@@ -94,7 +94,7 @@
 }
 
 .btn-delete:hover{
-    background-color: red;
+    background-color: rgb(205, 0, 0);
 }
 
 .btn-see-more:hover {
