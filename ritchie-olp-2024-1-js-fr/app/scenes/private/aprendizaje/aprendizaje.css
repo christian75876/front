@@ -14,7 +14,7 @@
     color: #5d1cde;
 }
 
-.botonInfo{
+.botonInfo {
     width: 30%;
     background: rgb(36, 222, 51);
     border-radius: 10px;
@@ -22,7 +22,8 @@
     font-weight: 900;
     cursor: pointer;
 }
-.botonInit{
+
+.botonInit {
     padding: 1em;
     background: rgb(36, 222, 51);
     border-radius: 10px;
@@ -31,9 +32,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.botonInit:hover{
+
+.botonInit:hover {
     background: rgb(4, 92, 32);
 }
+
 .course {
     display: flex;
     align-items: center;
@@ -54,8 +57,8 @@
 
 .contenedores {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
 .categoria {
@@ -85,5 +88,22 @@
 .div {
     display: flex;
     justify-content: space-around;
+}
+
+/* Estilos para pantallas pequeñas (hasta 768px) */
+@media screen and (max-width: 768px) {
+    .display {
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    .botonInfo {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-top: 10px; /* Espacio entre botones */
+    }
+
+    .contenedor {
+        width: calc(100% - 20px); /* Ocupa todo el ancho disponible */
+        margin: 10px 0; /* Espacio entre filas */
+    }
 }
 

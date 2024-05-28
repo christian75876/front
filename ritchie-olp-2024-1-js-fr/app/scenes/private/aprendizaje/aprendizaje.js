@@ -93,7 +93,7 @@ export function Aprendizaje() {
       <button id="btnCursos" class="${styles.botonInit}" >Ruta de aprendizaje</button>
       <button id="back" style="display: none;cursor: pointer;">⬅️</button>
       <div id="container-courses"></div>
-      <div class='contenedorInfo ${styles.conetenedores}' style="display: none;">
+      <div class='contenedorInfo ${styles.contenedores}' style="display: none;">
         ${crearEstudio(estudios)}
       </div>
     `;
