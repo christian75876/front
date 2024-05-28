@@ -10,7 +10,7 @@ export function NavigationBar(
   const letters = localStorage.name.split('');
   const letter = letters[0] + letters[1];
   console.log(letter)
-  let aux = localStorage.name.split('@')[0];;
+  let aux = localStorage.name.split('@')[0];
 
   if(localStorage.name === undefined) aux = 'username'
 
