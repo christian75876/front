@@ -73,7 +73,11 @@ export function SettingsScene() {
       }
     });
 
-    const updatedAt = user.updated_at.split('T')[0];
+    //Converción de la hora de base de datos a la hora en base a bogota
+    const bogotaDate = new Date(user.updated_at).toLocaleString('sv-SE', { timeZone: 'America/Bogota' });
+    // const timeZone = bogotaDate.replace(' ', 'T');
+    // console.log(timeZone);
+    const updatedAt = bogotaDate.split(' ')[0];
     alert(`La última modificación de contraseña fue: ${updatedAt}`);
 
     function monthDiff(d1, d2) {
@@ -90,8 +94,8 @@ export function SettingsScene() {
     if (diffInMonths > 3) {
       alert('La última actualización fue hace más de 3 meses.');
     }
-
-    console.log(`Diferencia en meses: ${diffInMonths}`);
+    //para verificar la diferencia en los meses
+    // console.log(`Diferencia en meses: ${diffInMonths}`);
   };
 
   return {
