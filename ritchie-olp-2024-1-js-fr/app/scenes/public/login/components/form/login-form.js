@@ -11,7 +11,6 @@ export async function LoginFormComponent() {
 
   const fechaActual = new Date();
   let hora = fechaActual.getHours();
-  console.log(hora);
   let img = day;
 
   //dependiendo de la hora va a mostrar una imagen o la otra!!
