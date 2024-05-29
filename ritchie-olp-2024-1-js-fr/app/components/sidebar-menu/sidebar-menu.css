@@ -50,6 +50,8 @@ aside.sidebar-menu > ul > li > button.active {
     border-radius: 10px;
 }
 
+
+
 @media only screen and (max-width: 768px) {
     aside.sidebar-menu {
         padding: 10px; /* Reducir el espaciado interno */

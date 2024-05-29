@@ -129,7 +129,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 690px) {
   .table {
     overflow-x: auto;
   }
@@ -137,6 +137,7 @@
   .table table {
     display: block;
     overflow-x: auto;
+    background-color: white;
   }
 
   .table th, .table td {

@@ -1,5 +1,3 @@
-/* 
-
 /* Estilos para el título */
 .title2 {
     color: var(--primary-color);
@@ -26,7 +24,7 @@
     border-radius: var(--border-radius);
     background-color: var(--info-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    width: 400px;
+    max-width: 400px; /* Cambiado a un ancho máximo para dispositivos más pequeños */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -80,3 +78,15 @@
 .button:hover {
     background-color: var(--success-color-hover);
 } 
+
+/* Media queries para hacer los estilos responsive */
+@media only screen and (max-width: 768px) {
+    .formContainer {
+        max-width: 90%; /* Cambiar el ancho máximo para dispositivos más pequeños */
+    }
+
+    .button {
+        font-size: 1rem; /* Reducir el tamaño del botón para dispositivos más pequeños */
+    }
+}
+
