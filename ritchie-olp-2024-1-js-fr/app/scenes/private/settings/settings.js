@@ -12,10 +12,6 @@ export function SettingsScene() {
                 <input class="${styles.email}" type="text" id="username" name="username" disabled>
             </div>
             <div class='${styles.formGroup}'>
-                <label for="current-password">Contraseña Actual</label>
-                <input type="password" id="current-password" name="current-password" required>
-            </div>
-            <div class='${styles.formGroup}'>
                 <label for="new-password">Nueva Contraseña</label>
                 <input type="password" id="new-password" name="new-password" required>
             </div>
@@ -25,11 +21,11 @@ export function SettingsScene() {
             </div>
             <button class='${styles.button}' type="submit">Actualizar</button>
         </form>
-  </div>
+      </div>
     `;
 
   const logic = async () => {
-    const token = localStorage.token;
+    const token = localStorage.getItem('token');
     
     let payload = token.split('.')[1];
     let decodedPayload = JSON.parse(atob(payload));
@@ -38,26 +34,46 @@ export function SettingsScene() {
     const resp = await fetch(`http://localhost:4000/api/users/${id}/`, {
       method: 'GET',
       headers: {
-        "Authorization" : `Bearer ${localStorage.getItem('token')}`
-    }});
+        "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }
+    });
     const user = await resp.json();
-    const email = document.getElementById('username');
-    email.value = `${user.email}`;
+    const emailField = document.getElementById('username');
+    emailField.value = `${user.email}`;
 
     const form = document.getElementById('form');
     form.addEventListener('submit', async (e) => {
-      e.preventDefault(); // previene el comportamiento por default que es, recargar la pagina
-      const currentPassword = document.getElementById('current-password').value;
+      e.preventDefault(); // previene el comportamiento por default que es recargar la página
       const newPassword = document.getElementById('new-password').value;
       const confirmPassword = document.getElementById('confirm-password').value;
-      console.log(user.password)
-      if(currentPassword !== user.password)alert('Error en contraseña actual');
+      if (newPassword !== confirmPassword) {
+        alert('Las contraseñas no coinciden');
+        return;
+      }
+
+      const updatePassword = await fetch(`http://localhost:4000/api/users/${id}`, {
+        method: 'PUT',
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+        },
+        body: JSON.stringify({
+          "username": user.username,
+          "email": user.email,
+          "password": newPassword
+        })
+      });
+
+      if (updatePassword.ok) {
+        alert('Contraseña actualizada con éxito.');
+      } else {
+        const errorData = await updatePassword.json();
+        alert(`Error al actualizar la contraseña: ${errorData.message}`);
+      }
     });
 
-
     const updatedAt = user.updated_at.split('T')[0];
-
-    alert(`La ultima modicificacion de contraseña fue: ${updatedAt}`);
+    alert(`La última modificación de contraseña fue: ${updatedAt}`);
 
     function monthDiff(d1, d2) {
       let months = (d2.getFullYear() - d1.getFullYear()) * 12;
@@ -68,18 +84,17 @@ export function SettingsScene() {
 
     const updatedDate = new Date(updatedAt);
     const currentDate = new Date();
-
     const diffInMonths = monthDiff(updatedDate, currentDate);
 
     if (diffInMonths > 3) {
       alert('La última actualización fue hace más de 3 meses.');
     }
-    
+
     console.log(`Diferencia en meses: ${diffInMonths}`);
-  }
+  };
 
   return {
     pageContent,
     logic
-  }
+  };
 }
