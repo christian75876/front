@@ -12,7 +12,7 @@ aside.sidebar-menu > ul {
     padding: 0;
     margin: 0;
 }
-
+/* Estilo de cada elemento de la lista */
 /* Estilo de cada elemento de la lista */
 aside.sidebar-menu > ul > li {
     margin-bottom: 1em; /* Espaciado entre elementos */
