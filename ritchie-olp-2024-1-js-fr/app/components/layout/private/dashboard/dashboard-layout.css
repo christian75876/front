@@ -5,6 +5,7 @@
     grid-template-columns: minmax(var(--sidebar-width), auto) 1fr;
     grid-auto-rows: var(--navbar-height) 1fr;
     height: 100vh;
+    background-color: rgb(250, 250, 240)
 }
 
 .sidebar {
