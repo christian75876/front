@@ -10,7 +10,7 @@ export function Games() {
   const pageContent = `
     <div class="${styles.container}">
       <div class="${styles.card}">
-        <div class="${styles['container-img']}">
+        <div id="questions" class="${styles['container-img']}">
           <img src="${games}" class="${styles.img} id="games">
         </div>
       </div>
@@ -25,10 +25,9 @@ export function Games() {
     `
   const logic = () => {
 
-    const games = document.getElementById('games');
-    games.addEventListener('click',()=> {
-      navigateTo('/dashboard/games/questions');
-      
+    const questions = document.getElementById("questions")
+    questions.addEventListener('click', () => {
+      navigateTo('/dashboard/questions');
     })
 
     const challenges = document.getElementById('challenges');

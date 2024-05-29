@@ -33,7 +33,7 @@ export const routes = {
         { path: '/dashboard/modules/create', component: ModuleCreateScene},
         { path: "/dashboard/aprendizaje", component: Learning},
         { path: "/dashboard/audit", component: AuditScene},
-        { path: '/dashboard/games/questions', component:gameQuestions}
+        { path: '/dashboard/questions', component:gameQuestions}
         // { path: '/dashboard/routes/languages', component: LanguageByRouteScene},
         // { path: '/dashboard/routes/languages/modules', component: ModulesByLanguage}
     ],
