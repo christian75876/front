@@ -56,6 +56,6 @@ aside.sidebar-menu > ul > li > button.active {
     }
 
     aside.sidebar-menu > ul > li > button {
-        font-size: 14px; /* Reducir el tamaño de fuente */
+        font-size: 10px; /* Reducir el tamaño de fuente */
     }
 }

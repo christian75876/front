@@ -27,8 +27,8 @@
     .container {
         grid-template-areas: "navbar navbar"
                              "sidebar main";
-        grid-template-columns: minmax(100px, auto) 1fr; /* Ajustar el ancho mínimo del sidebar */
-        grid-auto-rows: var(--navbar-height) 1fr;
+        grid-template-columns: minmax(100px, auto) 2fr; /* Ajustar el ancho mínimo del sidebar */
+        grid-auto-rows: var(--navbar-height) 1.2fr;
     }
 
     .sidebar {
