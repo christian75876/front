@@ -16,7 +16,7 @@
 
 .infoButton {
     width: 30%;
-    background: rgb(36, 222, 51);
+    background: var(--success-color);
     border-radius: 10px;
     color: white;
     font-weight: 900;
@@ -25,7 +25,7 @@
 
 .initButton {
     padding: 1em;
-    background: rgb(36, 222, 51);
+    background: var(--success-color);
     border-radius: 10px;
     color: white;
     font-weight: 900;
@@ -34,7 +34,7 @@
 }
 
 .initButton:hover {
-    background: rgb(4, 92, 32);
+    background: var(--success-color-hover);
 }
 
 .course {
