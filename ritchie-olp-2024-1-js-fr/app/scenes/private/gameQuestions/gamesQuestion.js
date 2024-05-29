@@ -84,6 +84,9 @@ export function gameQuestions(){
           button.classList.add('btnOpcion');
           button.textContent = option;
           button.style.cursor = "pointer";
+          button.style.fontSize = "0.1em"
+          button.style.padding = "0.5em"
+          button.style.color = "#000"
           button.addEventListener('click', () => checkAnswer(option));
           optionsElement.appendChild(button);
         });

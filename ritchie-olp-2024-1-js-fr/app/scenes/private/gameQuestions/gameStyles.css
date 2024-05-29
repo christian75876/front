@@ -1,42 +1,45 @@
-/* gameStyles.css */
-
-.father{
+.father {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .contenedor {
-    background-color: #f0f0f0;
+    background-color: #F5F5DC;
     padding: 20px;
+    border-radius: 10px;
+    font-size: 10em;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.25),
+        0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .title {
     font-size: 24px;
     font-weight: bold;
-    color: var(--white-color);
+    color: var(--black-color);
     margin-bottom: 10px;
     text-align: center;
 }
 
-.options button{
-    background-color: blue;
-    color: #f0f0f0;
+.options button {
+    background-color: var(--success-color);
+    color: var(--black-color);
     border-radius: 10px;
     font-weight: 900;
-
 }
 
 .opcions button {
-    background-color: #45a049;
+    background-color: var(--success-color);
     cursor: pointer;
-
 }
+
 .opcions button:hover {
-    background-color: #454ba0;
+    background-color: var(--success-color-hover);
 }
-
 
 #result {
     font-size: 18px;
@@ -47,12 +50,9 @@
     display: none;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #008CBA;
+    background-color: var(--success-color);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-.contenedor{
-    transform: scale(10rem);
 }
