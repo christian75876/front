@@ -7,7 +7,7 @@ export function gameQuestions(){
     <div id="question" class="${styles.title}"></div>
     <div id="options" class="${styles.options}"></div>
     <div id="result"></div>
-    <button id="nextButton" style="display: none;">Siguiente</button>
+    <button id="nextButton" style="display: none;">Next</button>
   </div>
   </div>
 `;
@@ -81,12 +81,13 @@ export function gameQuestions(){
         optionsElement.innerHTML = '';
         currentQ.options.forEach(option => {
           const button = document.createElement('button');
-          button.classList.add('btnOpcion');
           button.textContent = option;
           button.style.cursor = "pointer";
           button.style.fontSize = "0.1em"
           button.style.padding = "0.5em"
-          button.style.color = "#000"
+          button.style.color = "white"
+          button.style.borderRadius = "10px"
+          button.style.padding = "10px"
           button.addEventListener('click', () => checkAnswer(option));
           optionsElement.appendChild(button);
         });
@@ -96,14 +97,23 @@ export function gameQuestions(){
       function checkAnswer(option) {
         const currentQ = questions[currentQuestion];
         if (option === currentQ.answer) {
-          resultElement.textContent = "Correct!";
+          resultElement.textContent = "Correct!✅ ";
+          resultElement.style.fontSize = "0.3em";
+          resultElement.style.color = "#28a745"
+
           score++;
         } else {
-          resultElement.textContent = "Incorrect!";
+          resultElement.textContent = "❌ Incorrect!";
+          resultElement.style.fontSize = "0.3em";
+          resultElement.style.color = "red"
         }
         nextButton.style.display = 'block';
-        nextButton.style.background = 'green'
+        nextButton.style.background = '#0f69c4'
         nextButton.style.color = "white"
+        nextButton.style.fontSize = "0.2em";
+        nextButton.style.borderRadius = "10px"
+        nextButton.style.padding = "10px"
+
         optionsElement.querySelectorAll('button').forEach(btn => btn.disabled = true );
       }
 
@@ -113,6 +123,7 @@ export function gameQuestions(){
           displayQuestion();
           resultElement.textContent = '';
           nextButton.style.display = 'none';
+
           optionsElement.querySelectorAll('button').forEach(btn => btn.disabled = false);
         } else {
           endGame();
@@ -123,11 +134,11 @@ export function gameQuestions(){
         const percentage = (score / questions.length) * 100;
         let message = "";
         if (percentage >= 80) {
-          message = "Congratulations! You answered most of the questions correctly!";
+          message = "Congratulations! You answered most of the questions correctly!✅ ";
         } else if (percentage >= 60 && percentage < 80) {
-          message = "You did well, but there's room for improvement!";
+          message = "You did well, but there's room for improvement!📝";
         } else {
-          message = "You need more practice, my friend. Keep studying!";
+          message = "You need more practice, my friend. Keep studying!❌ ";
         }
         questionElement.innerHTML = `
         <p>You answered ${score} out of ${questions.length} questions correctly! ${message}</p>
@@ -138,7 +149,14 @@ export function gameQuestions(){
         nextButton.style.display = 'none';
 
         const restartButton = document.getElementById('restartButton');
+        restartButton.style.background = '#0f69c4'
         restartButton.addEventListener('click', restartGame);
+        restartButton.style.cursor = "pointer";
+        restartButton.style.fontSize = "0.5em"
+        restartButton.style.padding = "0.5em"
+        restartButton.style.color = "white"
+        restartButton.style.borderRadius = "10px"
+        restartButton.style.padding = "10px"
       }
 
       function restartGame() {
