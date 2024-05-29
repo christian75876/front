@@ -1,4 +1,3 @@
-import { DashboardLayout } from '../../../components/layout/private/dashboard/dashboard-layout';
 import styles from './settings.css';
 
 export function SettingsScene() {
@@ -6,7 +5,7 @@ export function SettingsScene() {
   const pageContent = `
       <h2 class='${styles.title2}'>Sección de usuarios</h2>
       <div class='${styles.formContainer }'>
-        <form action="#" method="post">
+        <form action="#" method="post" id="form">
             <h2 class='${styles.h2}'>Actualización de Contraseña</h2>
             <div class='${styles.formGroup}'>
                 <label for="username"> Email</label>
@@ -45,6 +44,17 @@ export function SettingsScene() {
     const email = document.getElementById('username');
     email.value = `${user.email}`;
 
+    const form = document.getElementById('form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // previene el comportamiento por default que es, recargar la pagina
+      const currentPassword = document.getElementById('current-password').value;
+      const newPassword = document.getElementById('new-password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      console.log(user.password)
+      if(currentPassword !== user.password)alert('Error en contraseña actual');
+    });
+
+
     const updatedAt = user.updated_at.split('T')[0];
 
     alert(`La ultima modicificacion de contraseña fue: ${updatedAt}`);
@@ -66,7 +76,6 @@ export function SettingsScene() {
     }
     
     console.log(`Diferencia en meses: ${diffInMonths}`);
-
   }
 
   return {
