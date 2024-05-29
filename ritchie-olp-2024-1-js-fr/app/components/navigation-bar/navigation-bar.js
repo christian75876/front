@@ -18,7 +18,7 @@ export function NavigationBar(
   <div class="${styles.container}" >
   <img src="${logoRiwi}" alt="User image" class="${styles.icono}">
     <ul class="${styles.list}">
-        <li  class="${styles.list_item}" id="homes"> <a class="${styles.list_a}"  href="#"  >🏠 Home</a></li>
+        <li  class="${styles.list_item}" id="homes"> <a class="${styles.list_a}"  href="#"  >Home</a></li>
         <li  class="${styles.list_item}" id ="aprendizaje"> <a class="${styles.list_a}"  href="#"  > Learning</a></li>
         <li  class="${styles.list_item}" id="games"> <a class="${styles.list_a}"  href="#"  > Games</a></li>    
     </ul>

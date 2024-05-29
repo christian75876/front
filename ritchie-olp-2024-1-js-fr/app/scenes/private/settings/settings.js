@@ -41,6 +41,7 @@ export function SettingsScene() {
     const emailField = document.getElementById('username');
     emailField.value = `${user.email}`;
 
+
     const form = document.getElementById('form');
     form.addEventListener('submit', async (e) => {
       e.preventDefault(); // previene el comportamiento por default que es recargar la página
