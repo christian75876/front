@@ -2,6 +2,7 @@ import styles from './games.css';
 import games from '../../../assets/img/game.png'
 import challenge from '../../../assets/img/challenges.png';
 import { Background, BackgroundNone } from '../../../components/form-components/background';
+import { navigateTo } from '../../../Router';
 
 
 export function Games() {
@@ -10,7 +11,7 @@ export function Games() {
     <div class="${styles.container}">
       <div class="${styles.card}">
         <div class="${styles['container-img']}">
-          <img src="${games}" class="${styles.img}">
+          <img src="${games}" class="${styles.img} id="games">
         </div>
       </div>
       <div class="${styles.card}">
@@ -23,6 +24,12 @@ export function Games() {
     
     `
   const logic = () => {
+
+    const games = document.getElementById('games');
+    games.addEventListener('click',()=> {
+      navigateTo('/dashboard/games/questions');
+      
+    })
 
     const challenges = document.getElementById('challenges');
     let aux = false;

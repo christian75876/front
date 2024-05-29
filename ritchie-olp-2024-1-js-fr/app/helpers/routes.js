@@ -13,6 +13,7 @@ import { ChallengeScene, CreateChallengeScene } from '../scenes/private/challeng
 import { ModuleCreateScene } from '../scenes/private/modules/module-create';
 import {Learning} from "../scenes/private/learning";
 import {AuditScene} from "../scenes/private/audit/audit"
+import { gameQuestions } from '../scenes/private/gameQuestions/gamesQuestion';
   
 
 
@@ -32,6 +33,7 @@ export const routes = {
         { path: '/dashboard/modules/create', component: ModuleCreateScene},
         { path: "/dashboard/aprendizaje", component: Learning},
         { path: "/dashboard/audit", component: AuditScene},
+        { path: '/dashboard/games/questions', component:gameQuestions}
         // { path: '/dashboard/routes/languages', component: LanguageByRouteScene},
         // { path: '/dashboard/routes/languages/modules', component: ModulesByLanguage}
     ],

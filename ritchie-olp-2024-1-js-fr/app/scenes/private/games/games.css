@@ -115,7 +115,6 @@
   background-color: #3d2d8c;
 }
 
-/* Media queries para hacer el diseño responsive */
 
 @media screen and (max-width: 768px) {
   .container {
