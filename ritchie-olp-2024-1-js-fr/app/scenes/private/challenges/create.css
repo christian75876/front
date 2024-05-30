@@ -1,0 +1,59 @@
+/* Estilos para el contenedor del editor */
+.editor {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Estilos para el contenedor del título del reto */
+.challenge_title-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el campo de entrada del título del reto */
+.challenge_title-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de la descripción del reto */
+.challenge_description-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos para el campo de entrada de la descripción del reto */
+.challenge_description-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el contenedor de los botones de acción */
+.description-container {
+    margin-bottom: 20px;
+}
+
+/* Estilos para los botones */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px; 
+    background-color: #f1aea0;
+    color: #fff;
+    font-weight: 900;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #e9837b;
+}

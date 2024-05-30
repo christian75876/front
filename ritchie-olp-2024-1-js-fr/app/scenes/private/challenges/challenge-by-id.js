@@ -5,9 +5,11 @@ import styles from "./challenge-by-id.css";
 export function ChallengeByIdScene(id) {
     
     let pageContent = `
+        <div class="${styles.contenedor}" >
         <h1 id="challenge-title" class="${styles.title}"></h1>
         <h2 id="description" class="${styles.description}"></h2>
         <div id="editor" class="${styles.editor}"></div>
+        </div>
         
     `;
 

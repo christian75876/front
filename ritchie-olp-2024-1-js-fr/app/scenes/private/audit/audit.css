@@ -5,7 +5,7 @@
 .table {
   display: flex;
   justify-content: center;
-  overflow: auto; /* Cambiado a auto para permitir el desbordamiento horizontal y vertical */
+  overflow: auto; 
   height: 80vh;
 }
 
@@ -61,11 +61,11 @@
 
 /* Alternating row colors */
 .table tbody tr:nth-child(odd) {
-  background-color: #f2f2f2; /* Color de fondo para filas impares */
+  background-color: #f2f2f2; 
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #ffffff; /* Color de fondo para filas pares */
+  background-color: #ffffff;
 }
 
 .filter-form {
