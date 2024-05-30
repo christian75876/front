@@ -47,8 +47,9 @@
 
 .btn {
     padding: 10px 20px; 
-    background-color: #ffbcaf;
+    background-color: #f1aea0;
     color: #fff;
+    font-weight: 900;
     border: none;
     border-radius: 5px;
     cursor: pointer;
