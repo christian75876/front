@@ -24,6 +24,7 @@ export function UserScene(params) {
   }});
     const users = await resp.json();
     const userInfo = document.getElementById('user-info');
+    if (userInfo) {
     userInfo.innerHTML = `
       <table class="${styles['user-table']}">
         <thead>
@@ -46,18 +47,19 @@ export function UserScene(params) {
         </tbody>
       </table>
     `;
-
+    }
     let aux = false;
     const newUser = document.getElementById('btn');
-    newUser.addEventListener('click', () => {
-      if (aux) return;
-      aux = true;
-      const overlay = document.getElementById('background');
-      Background(overlay);
-      const messageSection = document.getElementById('messageSection');
-      messageSection.style.display = 'block';
+    if(newUser){
+      newUser.addEventListener('click', () => {
+        if (aux) return;
+        aux = true;
+        const overlay = document.getElementById('background');
+        Background(overlay);
+        const messageSection = document.getElementById('messageSection');
+        messageSection.style.display = 'block';
 
-      const formMenu = `
+        const formMenu = `
         <form id="newUserForm" class="${styles.userForm}">
           <label class="labelUser" for="username">User:</label>
           <input class="${styles.inputUser}" type="text" id="username" name="username" required>
@@ -75,56 +77,58 @@ export function UserScene(params) {
           <button class="${styles.btn} ${styles.btnFor}" id="closeMessage" type="button">Cerrar</button>
         </form>
       `;
-      messageSection.innerHTML = formMenu;
+        messageSection.innerHTML = formMenu;
 
-      const closeButton = document.getElementById('closeMessage');
-      closeButton.addEventListener('click', () => {
-        aux = false;
-        BackgroundNone();
-        messageSection.style.display = 'none';
-      });
-
-      const newUserForm = document.getElementById('newUserForm');
-      newUserForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(newUserForm);
-        const userData = {
-          username: formData.get('username'),
-          email: formData.get('email'),
-          password: formData.get('password')
-        };
-
-        // if (userData.password !== formData.get('confirmPassword')) {
-        //   alert('Las contraseñas no coinciden');
-        //   return;
-        // }
-
-        try {
-          const response = await fetch('http://localhost:4000/api/auth/register', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-               "Authorization" : `Bearer ${localStorage.getItem('token')}`
-            },
-            body: JSON.stringify(userData)
-          });
-
-          if (!response.ok) {
-            throw new Error('Error en la creación del usuario');
-          }
-
-          alert('Usuario creado exitosamente');
+        const closeButton = document.getElementById('closeMessage');
+        closeButton.addEventListener('click', () => {
           aux = false;
           BackgroundNone();
           messageSection.style.display = 'none';
-          logic();
-        } catch (error) {
-          console.error('Error:', error);
-          alert('El usuario ya está registrado en la plataforma.'+ error);
-        }
+        });
+
+        const newUserForm = document.getElementById('newUserForm');
+        newUserForm.addEventListener('submit', async (event) => {
+          event.preventDefault();
+
+          const formData = new FormData(newUserForm);
+          const userData = {
+            username: formData.get('username'),
+            email: formData.get('email'),
+            password: formData.get('password')
+          };
+
+          // if (userData.password !== formData.get('confirmPassword')) {
+          //   alert('Las contraseñas no coinciden');
+          //   return;
+          // }
+
+          try {
+            const response = await fetch('http://localhost:4000/api/auth/register', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                "Authorization": `Bearer ${localStorage.getItem('token')}`
+              },
+              body: JSON.stringify(userData)
+            });
+
+            if (!response.ok) {
+              throw new Error('Error en la creación del usuario');
+            }
+
+            alert('Usuario creado exitosamente');
+            aux = false;
+            BackgroundNone();
+            messageSection.style.display = 'none';
+            logic();
+          } catch (error) {
+            console.error('Error:', error);
+            alert('El usuario ya está registrado en la plataforma.' + error);
+          }
+        });
       });
-    });
+
+    }
 
     document.querySelectorAll(`.${styles['btn-delete']}`).forEach(btn =>{
       btn.addEventListener('click', async (e) =>{
