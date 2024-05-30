@@ -12,7 +12,7 @@ aside.sidebar-menu > ul {
     padding: 0;
     margin: 0;
 }
-
+/* Estilo de cada elemento de la lista */
 /* Estilo de cada elemento de la lista */
 aside.sidebar-menu > ul > li {
     margin-bottom: 1em; /* Espaciado entre elementos */
@@ -50,12 +50,14 @@ aside.sidebar-menu > ul > li > button.active {
     border-radius: 10px;
 }
 
+
+
 @media only screen and (max-width: 768px) {
     aside.sidebar-menu {
         padding: 10px; /* Reducir el espaciado interno */
     }
 
     aside.sidebar-menu > ul > li > button {
-        font-size: 14px; /* Reducir el tamaño de fuente */
+        font-size: 10px; /* Reducir el tamaño de fuente */
     }
 }

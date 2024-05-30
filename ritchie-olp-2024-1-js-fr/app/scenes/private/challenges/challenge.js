@@ -6,7 +6,7 @@ import { fetchApi } from '../../../helpers/fetch-api'
 export function ChallengeScene(params) {
     let pageContent = `
     <section class="${styles["header-challenges"]}">
-        <h1>Challenges</h1>
+        <h1 class="${styles.title}">Challenges</h1>
         <button id="create-challenge">Crear</button>
     </section>  
 
@@ -25,10 +25,10 @@ export function ChallengeScene(params) {
         console.log(response);
         challenges.innerHTML = `
         ${response.map(challenge => `
-            <div class="${styles["challenge-card"]}">
+            <div class="${styles.containerItem}">
                 <h2>${challenge.title}</h2>
                 <p>${challenge.description.substring(0, 60)}</p>
-                <button id="challenge-${challenge.id}">Ver</button>
+                <button id="challenge-${challenge.id}" class="${styles.btn}">Ver</button>
             </div>
         `).join('')}
        `

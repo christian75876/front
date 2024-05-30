@@ -14,26 +14,29 @@
     color: #5d1cde;
 }
 
-.botonInfo{
+.infoButton {
     width: 30%;
-    background: rgb(36, 222, 51);
+    background: var(--success-color);
     border-radius: 10px;
     color: white;
     font-weight: 900;
     cursor: pointer;
 }
-.botonInit{
+
+.initButton {
     padding: 1em;
-    background: rgb(36, 222, 51);
+    background: var(--success-color);
     border-radius: 10px;
     color: white;
     font-weight: 900;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
-.botonInit:hover{
-    background: rgb(4, 92, 32);
+
+.initButton:hover {
+    background: var(--success-color-hover);
 }
+
 .course {
     display: flex;
     align-items: center;
@@ -52,13 +55,13 @@
     background-color: #357ab7;
 }
 
-.contenedores {
+.containers {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the items horizontally */
+    flex-direction: column;
+    align-items: center;
 }
 
-.categoria {
+.category {
     width: 100%;
     text-align: center;
     color: black;
@@ -67,7 +70,7 @@
     margin: 20px 0;
 }
 
-.contenedor {
+.container {
     background: #146ac0;
     color: white;
     font-weight: 900;
@@ -87,3 +90,19 @@
     justify-content: space-around;
 }
 
+/* Styles for small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+    .display {
+        width: 100%; /* Full width */
+    }
+
+    .infoButton {
+        width: 100%; /* Full width */
+        margin-top: 10px; /* Space between buttons */
+    }
+
+    .container {
+        width: calc(100% - 20px); /* Full width */
+        margin: 10px 0; /* Space between rows */
+    }
+}

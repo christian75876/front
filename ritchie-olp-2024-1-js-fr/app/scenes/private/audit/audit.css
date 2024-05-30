@@ -1,4 +1,3 @@
-
 #home {
   margin: 15px;
 }
@@ -6,11 +5,17 @@
 .table {
   display: flex;
   justify-content: center;
+  overflow: auto; /* Cambiado a auto para permitir el desbordamiento horizontal y vertical */
+  height: 80vh;
 }
 
 .table table {
   background-color: var(--info-color);
   border-radius: 5px;
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  border-bottom: 1px solid #000;
 }
 
 .table th {
@@ -18,12 +23,22 @@
   border-radius: 25px;
   transition: all 0.3s ease 0s;
   width: 15vw;
+  background-color: var(--info-color);
 }
 
 .table th:hover {
   box-shadow: 0 0 15px #d0d0df;
-  /* background-color: #7464ff; */
   transition: all 0.3s ease 0s;
+}
+
+.table thead {
+  position: relative;
+}
+
+.table thead tr {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .table a {
@@ -38,12 +53,22 @@
   text-shadow: 0 0 5px #d0d0df;
   transition: all 0.3s ease 0s;
 }
+
 .table td {
-  background-color: #fff;
   text-align: center;
+  padding: 15px;
 }
 
-.filter-form{
+/* Alternating row colors */
+.table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Color de fondo para filas impares */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #ffffff; /* Color de fondo para filas pares */
+}
+
+.filter-form {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -55,17 +80,95 @@
 }
 
 .btn {
-   background-color: var(--success-color);
-    color: #fff;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 3px;
-    margin-top: 10px;
+  background-color: var(--success-color);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 10px;
 }
 
 .btn:hover {
   background-color: var(--success-color-hover);
 }
 
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .table {
+    overflow-x: auto;
+  }
 
+  .table table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .table th, .table td {
+    padding: 10px;
+    width: auto;
+  }
+
+  .table tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .table thead tr {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .table th, .table td {
+    text-align: left;
+    white-space: nowrap; /* Evitar que el texto se envuelva */
+  }
+}
+
+@media (max-width: 690px) {
+  .table {
+    overflow-x: auto;
+  }
+
+  .table table {
+    display: block;
+    overflow-x: auto;
+    background-color: white;
+  }
+
+  .table th, .table td {
+    padding: 8px;
+    width: auto;
+  }
+
+  .table tbody tr {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .table th {
+    position: sticky;
+    top: 0;
+    background-color: var(--info-color);
+    z-index: 1;
+  }
+
+  .table th{
+    display: none;
+  }
+  
+  .table td {
+    display: block;
+    text-align: left;
+    white-space: nowrap; /* Evitar que el texto se envuelva */
+  }
+
+  .table tbody tr {
+    margin-bottom: 10px; /* Añadir espacio entre filas */
+  }
+}

@@ -7,6 +7,7 @@
 .contenedorUser {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Para que los elementos se envuelvan en pantallas pequeñas */
 }
 
 .hidden {
@@ -40,11 +41,13 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    table-layout: fixed; /* Para que las tablas sean más flexibles */
 }
 
 .user-table th, .user-table td, .user-details-table th, .user-details-table td {
     border: 1px solid #ddd;
     padding: 8px;
+    word-wrap: break-word; /* Para que el contenido se ajuste dentro de las celdas */
 }
 
 .user-table th, .user-details-table th {
@@ -76,16 +79,15 @@
 }
 
 .btn-delete {
-    background-color: var(--success-color);
+    background-color: red;
     color: #fff;
     border: none;
     padding: 8px 16px;
     cursor: pointer;
     border-radius: 3px;
-
 }
 
-.inputUser{
+.inputUser {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -93,12 +95,12 @@
     background: rgba(255, 255, 255, 0.1);
 }
 
-.btn-delete:hover{
-    background-color: red;
+.btn-delete:hover {
+    background-color: rgb(205, 0, 0);
 }
 
 .btn-see-more:hover {
-    background-color:var(--primary-color)
+    background-color: var(--primary-color);
 }
 
 .message {
@@ -107,7 +109,7 @@
     text-align: center;
 }
 
-.userForm{
+.userForm {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -128,8 +130,96 @@
     color: white;
     cursor: pointer;
     margin: 5px;
-  }
+}
 
-  .btn:hover {
+.btn:hover {
     background-color: var(--success-color-hover);
-  }
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .contenedorUser {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .userForm {
+        width: 80%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: calc(var(--font-size-base) * 0.8);
+    }
+
+    .btn-see-more, .btn-delete {
+        padding: 6px 12px;
+    }
+
+    .inputUser {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .userForm {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .user-table, .user-details-table {
+        font-size: 0.9em; /* Reducción de tamaño de fuente para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .page-title {
+        font-size: calc(var(--font-size-base) * 0.6);
+    }
+
+    .btn-see-more, .btn-delete {
+        padding: 4px 8px;
+    }
+
+    .userForm {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .contenedorUser {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .user-table, .user-details-table {
+        display: block; /* Para hacer la tabla tipo "block" en pantallas muy pequeñas */
+        overflow-x: auto; /* Permitir desplazamiento horizontal */
+    }
+
+    .user-table thead, .user-details-table thead {
+        display: none; /* Ocultar encabezados de tabla en pantallas pequeñas */
+    }
+
+    .user-table tr, .user-details-table tr {
+        display: block; /* Mostrar filas como bloques individuales */
+        margin-bottom: 10px; /* Espacio entre filas */
+    }
+
+    .user-table td, .user-details-table td {
+        display: block; /* Mostrar celdas como bloques individuales */
+        text-align: right; /* Alinear texto a la derecha */
+        padding-left: 50%; /* Añadir espacio a la izquierda */
+        position: relative;
+    }
+
+    .user-table td:before, .user-details-table td:before {
+        content: attr(data-label); /* Usar el atributo data-label para mostrar encabezados */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

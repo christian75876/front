@@ -1,11 +1,14 @@
 import { fetchApi } from "../../../helpers/fetch-api";
 import { QuillDeltaToHtmlConverter  } from 'quill-delta-to-html';
+import styles from "./challenge-by-id.css";
 
 export function ChallengeByIdScene(id) {
     
     let pageContent = `
-        <h1 id="challenge-title"></h1>
-        <div id="editor"></div>
+        <h1 id="challenge-title" class="${styles.title}"></h1>
+        <h2 id="description" class="${styles.description}"></h2>
+        <div id="editor" class="${styles.editor}"></div>
+        
     `;
 
     let logic = async () => {
@@ -17,7 +20,10 @@ export function ChallengeByIdScene(id) {
                 },
             });
             console.log(resp);
-            document.getElementById('challenge-title').innerText = resp.title;
+            document.getElementById('challenge-title').innerText =resp.title;
+            const description = resp.description.replace(/"/g, '');
+            document.getElementById('description').innerText = `Description: ${description}`;
+            
             
             const converter = new QuillDeltaToHtmlConverter(JSON.parse(resp.content).ops, {});
             const htmlContent = converter.convert();

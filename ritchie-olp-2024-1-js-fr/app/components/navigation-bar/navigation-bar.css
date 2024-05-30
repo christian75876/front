@@ -1,9 +1,7 @@
-
-
-/* Estilos para el contenedor principal */
+/* Styles for the main container */
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: var(--spacing-2);
     background-color: #001F3F;
@@ -14,7 +12,7 @@
     gap: var(--spacing-2);
 }
 
-/* Estilos para las imágenes dentro del contenedor */
+/* Styles for images inside the container */
 .container .userImage {
     width: 40px;
     height: 40px;
@@ -22,22 +20,22 @@
     border-radius: 50%;
 }
 
-.icono{
+.icono {
     height: 4em;
     object-fit: contain;
-
+    margin-right: auto; /* Alinea la imagen al lado izquierdo */
 }
 
-/* Estilos para el texto dentro del contenedor */
+/* Styles for the text inside the container */
 .container p {
     font-size: 16px;
     color: white;
 }
 
-/* Estilos para los elementos de la lista */
+/* Styles for list items */
 .list_item {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     list-style: none;
     text-align: center;
     color: inherit;
@@ -47,9 +45,9 @@
     padding: 10px 20px;
 }
 
-.list_a{
+.list_a {
     color: inherit;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .list_item:hover {
@@ -61,7 +59,7 @@
     cursor: pointer;
 }
 
-/* Estilos para los botones */
+/* Styles for buttons */
 .button {
     background-color: transparent;
     border: none;
@@ -80,28 +78,46 @@
 
 .button:active {
     transform: scale(0.95);
-   
 }
 
-/* Estilos para la lista */
+/* Styles for the list */
 .list {
     display: flex;
     flex-direction: row;
     gap: 1.5em;
     align-items: center;
 }
+
 .list_item:active {
-    background-color: #283593; 
+    background-color: #283593;
     border-radius: 10px;
 }
 
-.container .icono{
+.container .icono {
     object-fit: cover;
 }
+
+.img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Styles for small screens (up to 768px) */
 @media only screen and (max-width: 768px) {
     .container {
         flex-direction: column;
+        align-items: flex-start; /* Alinea todo hacia la izquierda */
         height: auto;
+        padding: var(--spacing-1);
     }
 
     .container .userImage {
@@ -115,8 +131,14 @@
 
     .list {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .list_item {
+        justify-content: flex-start;
+    }
+
+    .icono {
+        margin-right: 0; /* Quita el margen derecho en dispositivos más pequeños */
     }
 }
-
-
-

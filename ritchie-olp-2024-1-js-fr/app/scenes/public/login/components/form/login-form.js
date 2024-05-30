@@ -11,13 +11,10 @@ export async function LoginFormComponent() {
 
   const fechaActual = new Date();
   let hora = fechaActual.getHours();
-  console.log(hora);
   let img = day;
 
   //dependiendo de la hora va a mostrar una imagen o la otra!!
   if(hora > 12) img = night;
-
-  console.log(img);
 
   root.innerHTML = `
     <div class="${style.contenedor}">
@@ -49,6 +46,7 @@ export async function LoginFormComponent() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+
     if (!formValidator(email, password)) {
       alert('Please fill in all fields');
       return;
@@ -57,6 +55,7 @@ export async function LoginFormComponent() {
     const token = await login(email, password);
     if (token) {
       localStorage.setItem('token', token);
+      localStorage.setItem('name', email);
       navigateTo('/dashboard');
     } else {
       alert('Invalid credentials');
