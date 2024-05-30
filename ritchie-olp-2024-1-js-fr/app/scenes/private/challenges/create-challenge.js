@@ -2,7 +2,7 @@ import Quill from 'quill';  // Importa Quill desde node_modules
 import 'quill/dist/quill.snow.css';
 //import 'quill/dist/quill.bubble.css'; // para el tema bubble
 import { ToolbarContainer } from './components/toolbar-container';
-import styles from './challenge.css';
+import styles from './create.css';
 import { fetchApi } from '../../../helpers/fetch-api';
 import { navigateTo } from '../../../Router';
 
